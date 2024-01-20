@@ -736,10 +736,12 @@ bool process_naginata(uint16_t keycode, keyrecord_t *record) {
         addToListArray(&nginput, &a);
       } else {
         NGList a;
-        copyList(&(nginput.elements[nginput.size - 1]), &a);
         NGList b;
-        copyList(&a, &b);
-        addToList(&b, keycode);
+        if (nginput.size > 0) {
+          copyList(&(nginput.elements[nginput.size - 1]), &a);
+          copyList(&a, &b);
+          addToList(&b, keycode);
+        }
 
         // 前のキーとの同時押しの可能性があるなら前に足す
         // 同じキー連打を除外
