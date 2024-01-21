@@ -759,7 +759,7 @@ bool process_naginata(uint16_t keycode, keyrecord_t *record) {
       }
       
       // 連続シフト
-      static uint16_t rs[10][2] = {{NG_D, NG_F}, {NG_C, NG_V}, {NG_J, NG_K}, {NG_M, NG_COMM}, {NG_SHFT, 0}, {NG_SHFT2, 0}, {NG_F, 0}, {NG_V, 0}, {NG_J, 0}, {NG_M, 0}};
+      static const uint16_t rs[10][2] = {{NG_D, NG_F}, {NG_C, NG_V}, {NG_J, NG_K}, {NG_M, NG_COMM}, {NG_SHFT, 0}, {NG_SHFT2, 0}, {NG_F, 0}, {NG_V, 0}, {NG_J, 0}, {NG_M, 0}};
 
       for (int i = 0; i < 10; i++) {
         NGList rskc;
@@ -876,6 +876,7 @@ int number_of_candidates(NGList *keys, bool strict) {
 
   naginata_kanamap bngdickana; // PROGMEM buffer
   int noc = 0;
+  static const uint16_t hrs[4][2] = {{NG_D, NG_F}, {NG_C, NG_V}, {NG_J, NG_K}, {NG_M, NG_COMM}};
 
   if (strict) { // 完全一致
     if (keys->size == 1 && (compareList0(keys, NG_SHFT) || compareList0(keys, NG_SHFT2))) {
@@ -893,39 +894,20 @@ int number_of_candidates(NGList *keys, bool strict) {
         }
       }
     } else {
-      if (keys->size == 3 && compareList01(keys, NG_D, NG_F)) {
-        for (int i = 0; i < sizeof ngdickana / sizeof bngdickana; i++) {
-          memcpy_P(&bngdickana, &ngdickana[i], sizeof(bngdickana));
-          if (bngdickana.shift == (B_D|B_F) && bngdickana.douji == ng_key[keys->elements[2] - NG_Q]) {
-            noc = 1;
-            break;
+      bool f = true;
+      for (int j = 0; j < 4; j++) {
+        if (f && keys->size == 3 && compareList01(keys, hrs[j][0], hrs[j][1])) {
+          for (int i = 0; i < sizeof ngdickana / sizeof bngdickana; i++) {
+            memcpy_P(&bngdickana, &ngdickana[i], sizeof(bngdickana));
+            if (bngdickana.shift == (ng_key[hrs[j][0] - NG_Q] | ng_key[hrs[j][1] - NG_Q]) && bngdickana.douji == ng_key[keys->elements[2] - NG_Q]) {
+              noc = 1;
+              f = false;
+              break;
+            }
           }
         }
-      } else if (keys->size == 3 && compareList01(keys, NG_C, NG_V)) {
-        for (int i = 0; i < sizeof ngdickana / sizeof bngdickana; i++) {
-          memcpy_P(&bngdickana, &ngdickana[i], sizeof(bngdickana));
-          if (bngdickana.shift == (B_C|B_V) && bngdickana.douji == ng_key[keys->elements[2] - NG_Q]) {
-            noc = 1;
-            break;
-          }
-        }
-      } else if (keys->size == 3 && compareList01(keys, NG_J, NG_K)) {
-        for (int i = 0; i < sizeof ngdickana / sizeof bngdickana; i++) {
-          memcpy_P(&bngdickana, &ngdickana[i], sizeof(bngdickana));
-          if (bngdickana.shift == (B_J|B_K) && bngdickana.douji == ng_key[keys->elements[2] - NG_Q]) {
-            noc = 1;
-            break;
-          }
-        }
-      } else if (keys->size == 3 && compareList01(keys, NG_M, NG_COMM)) {
-        for (int i = 0; i < sizeof ngdickana / sizeof bngdickana; i++) {
-          memcpy_P(&bngdickana, &ngdickana[i], sizeof(bngdickana));
-          if (bngdickana.shift == (B_M|B_COMM) && bngdickana.douji == ng_key[keys->elements[2] - NG_Q]) {
-            noc = 1;
-            break;
-          }
-        }
-      } else {
+      }
+      if (f) {
         uint32_t keyset = 0UL;
         for (int i = 0; i < keys->size; i++) {
           keyset |= ng_key[keys->elements[i] - NG_Q];
@@ -958,39 +940,20 @@ int number_of_candidates(NGList *keys, bool strict) {
         }
       }
     } else {
-      if (keys->size == 3 && compareList01(keys, NG_D, NG_F)) {
-        for (int i = 0; i < sizeof ngdickana / sizeof bngdickana; i++) {
-          memcpy_P(&bngdickana, &ngdickana[i], sizeof(bngdickana));
-          if (bngdickana.shift == (B_D|B_F) && bngdickana.douji == ng_key[keys->elements[2] - NG_Q]) {
-            noc = 1;
-            break;
+      bool f = true;
+      for (int j = 0; j < 4; j++) {
+        if (f && keys->size == 3 && compareList01(keys, hrs[j][0], hrs[j][1])) {
+          for (int i = 0; i < sizeof ngdickana / sizeof bngdickana; i++) {
+            memcpy_P(&bngdickana, &ngdickana[i], sizeof(bngdickana));
+            if (bngdickana.shift == (ng_key[hrs[j][0] - NG_Q] | ng_key[hrs[j][1] - NG_Q]) && bngdickana.douji == ng_key[keys->elements[2] - NG_Q]) {
+              noc = 1;
+              f = false;
+              break;
+            }
           }
         }
-      } else if (keys->size == 3 && compareList01(keys, NG_C, NG_V)) {
-        for (int i = 0; i < sizeof ngdickana / sizeof bngdickana; i++) {
-          memcpy_P(&bngdickana, &ngdickana[i], sizeof(bngdickana));
-          if (bngdickana.shift == (B_C|B_V) && bngdickana.douji == ng_key[keys->elements[2] - NG_Q]) {
-            noc = 1;
-            break;
-          }
-        }
-      } else if (keys->size == 3 && compareList01(keys, NG_J, NG_K)) {
-        for (int i = 0; i < sizeof ngdickana / sizeof bngdickana; i++) {
-          memcpy_P(&bngdickana, &ngdickana[i], sizeof(bngdickana));
-          if (bngdickana.shift == (B_J|B_K) && bngdickana.douji == ng_key[keys->elements[2] - NG_Q]) {
-            noc = 1;
-            break;
-          }
-        }
-      } else if (keys->size == 3 && compareList01(keys, NG_M, NG_COMM)) {
-        for (int i = 0; i < sizeof ngdickana / sizeof bngdickana; i++) {
-          memcpy_P(&bngdickana, &ngdickana[i], sizeof(bngdickana));
-          if (bngdickana.shift == (B_M|B_COMM) && bngdickana.douji == ng_key[keys->elements[2] - NG_Q]) {
-            noc = 1;
-            break;
-          }
-        }
-      } else {
+      }
+      if (f) {
         uint32_t keyset = 0UL;
         for (int i = 0; i < keys->size; i++) {
           keyset |= ng_key[keys->elements[i] - NG_Q];
