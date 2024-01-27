@@ -31,13 +31,14 @@ bool naginata_state(void);
 void switchOS(uint8_t);
 void ng_set_unicode_mode(uint8_t);
 void ng_show_os(void);
-void mac_live_conversion_toggle(void);
+// void mac_live_conversion_toggle(void);
 void tategaki_toggle(void);
-void kouchi_shift_toggle(void);
+// void kouchi_shift_toggle(void);
 
 bool process_naginata(uint16_t, keyrecord_t *);
 // void set_naginata(uint8_t);
 void set_naginata(uint8_t, uint16_t *, uint16_t *);
+void ng_send_unicode_string_P(const char *);
 
 void nofunc(void);
 
@@ -166,13 +167,13 @@ typedef enum naginata_keycodes {
   NG_SHFT,
   NG_SHFT2,
 
-  NG_ON,
-  NG_OFF,
-  NG_CLR,
+  // NG_ON,
+  // NG_OFF,
+  // NG_CLR,
   NGSW_WIN,
   NGSW_MAC,
   NGSW_LNX,
-  NG_MLV,
+  // NG_MLV,
   NG_SHOS,
   NG_TAYO,
   NG_KOTI,
@@ -183,9 +184,9 @@ typedef union {
   uint32_t raw;
   struct {
     uint8_t os;
-    bool live_conv :1;
+    // bool live_conv :1;
     bool tategaki :1;
-    bool kouchi_shift :1;
+    // bool kouchi_shift :1;
   };
 } user_config_t;
 
