@@ -769,9 +769,10 @@ bool process_naginata(uint16_t keycode, keyrecord_t *record) {
           for (uint8_t k = 0; k < nginput.size; k++) {
             keycomb_buf |= ng_key[nginput.elements[k].keycode - NG_Q];
           }
-          keycomb_buf ||= ng_key[keycode - NG_Q];
+          keycomb_buf = ng_key[keycode - NG_Q];
           if (includeSet(&ngpressd, NG_SHFT) >= 0 && includeList(&nginput, NG_SHFT) < 0) {            
             bool isExist = false;
+            naginata_keymap bngmap; // PROGMEM buffer
             for (uint16_t k = 0; k < sizeof ngmap / sizeof bngmap; k++) {
               memcpy_P(&bngmap, &ngmap[k], sizeof(bngmap));
               if (keycomb_buf == (bngmap.key & keycomb_buf)) {
