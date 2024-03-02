@@ -14,6 +14,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+/*
+
+TODO
+キーボードによっては不安定、バッファに文字が残る
+キーを押す順序によって、シェが出ない
+
+*/
+
 #include QMK_KEYBOARD_H
 #include "nglist.h"
 #include "nglistarray.h"
