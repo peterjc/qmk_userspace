@@ -18,7 +18,7 @@
 
 TODO
 キーボードによっては不安定、バッファに文字が残る
-キーを押す順序によって、シェが出ない
+キーを押す順序によって、シェ、チェが出ない（早期確定に入ってしまう）
 
 */
 
@@ -959,7 +959,13 @@ int number_of_candidates(NGList *keys, bool strict) {
     for (int i = 0; i < sizeof ngdickana / sizeof bngdickana; i++) {
       memcpy_P(&bngdickana, &ngdickana[i], sizeof(bngdickana));
       if (bngdickana.shift == 0UL && ((bngdickana.douji & keyset) == keyset)) {
-        noc++;
+        // シェ、チェは2キーでnoc=1になるが、3キー目を押していないので早期確定してはいけない
+        // if (keys->size < ..) { としたいが
+        if (keyset == (B_M | B_R) || keyset == (B_M | B_G)) {
+          noc = 2;
+        } else {
+          noc++;
+        }
         if (noc > 1) break;
       }
     }
@@ -1251,7 +1257,7 @@ void ngh_MCX() { // ^x【^v】{改行}{Space}+{↑}^x
   ng_cut();
 }
 
-void ngh_MCC() { // ／{改行}
+void ngh_MCC() { // ／{改行} 
   ng_send_unicode_string_P(PSTR("／"));
 }
 
