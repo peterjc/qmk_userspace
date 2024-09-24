@@ -307,7 +307,8 @@ const PROGMEM naginata_kanamap ngdickana[] = {
   {.shift = 0UL        , .douji = B_U             , .kana = SS_TAP(X_BACKSPACE) , .func = nofunc },
 
   {.shift = 0UL        , .douji = B_V|B_M         , .kana = SS_TAP(X_ENTER)  , .func = nofunc }, // enter
-  {.shift = B_SHFT     , .douji = B_V|B_M         , .kana = SS_TAP(X_ENTER)  , .func = nofunc }, // enter+シフト(連続シフト)
+  // {.shift = B_SHFT     , .douji = B_V|B_M         , .kana = SS_TAP(X_ENTER)  , .func = nofunc }, // enter+シフト(連続シフト)
+  // 冗長シフトのせいで句読点の確定が遅れる。
 
   {.shift = 0UL        , .douji = B_T             , .kana = ""       , .func = ng_T }, //
   {.shift = 0UL        , .douji = B_Y             , .kana = ""       , .func = ng_Y }, //
