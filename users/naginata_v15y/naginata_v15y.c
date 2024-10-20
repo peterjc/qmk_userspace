@@ -1028,7 +1028,7 @@ void ngh_JKA() { // ……{改行}
 }
 
 void ngh_JKS() { // (){改行}{↑}
-  ng_send_unicode_string_P(PSTR("()"));
+  ng_send_unicode_string_P(PSTR("（）"));
   ng_up(1);
 }
 
