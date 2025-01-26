@@ -961,8 +961,9 @@ int number_of_candidates(NGList *keys, bool strict) {
       memcpy_P(&bngdickana, &ngdickana[i], sizeof(bngdickana));
       if (bngdickana.shift == 0UL && ((bngdickana.douji & keyset) == keyset)) {
         // シェ、チェは2キーでnoc=1になるが、3キー目を押していないので早期確定してはいけない
-        // if (keys->size < ..) { としたいが
-        if (keyset == (B_M | B_R) || keyset == (B_M | B_G)) {
+        // 編集モードがあるので、commaで「ん」と早期確定してはいけない
+        // if (keys->size < ..) { としたいが...
+        if (keyset == (B_M | B_R) || keyset == (B_M | B_G) || keyset == B_COMM) {
           noc = 2;
         } else {
           noc++;
