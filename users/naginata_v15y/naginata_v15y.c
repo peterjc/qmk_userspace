@@ -800,8 +800,16 @@ bool process_naginata(uint16_t keycode, keyrecord_t *record) {
           ng_type(&(nginput.elements[0]));
           removeFromListArrayAt(&nginput, 0);
         }
+      } else {
+        NGList e;
+        initializeList(&e);
+        addToListArray(&nginput, &e);
+        if (nginput.size > 1 || number_of_candidates(&(nginput.elements[0]), false) == 1) {
+          ng_type(&(nginput.elements[0]));
+          removeFromListArrayAt(&nginput, 0);
+        }
       }
-
+      
       #if defined(CONSOLE_ENABLE)
           uprintf("<process_naginata released=%u nginput.size=%u\n", keycode, nginput.size);
       #endif
