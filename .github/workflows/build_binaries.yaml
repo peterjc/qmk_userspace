@@ -12,6 +12,7 @@ jobs:
     with:
       qmk_repo: qmk/qmk_firmware
       qmk_ref: master
+      preparation_command: 'for KB in "$GITHUB_WORKSPACE/keyboards/*/"; do ln -s $KB qmk_firmware/keyboards/ ; done'
 
   publish:
     name: 'QMK Userspace Publish'
