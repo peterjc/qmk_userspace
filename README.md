@@ -6,8 +6,9 @@ This is my fork of the [QMK Userspace repository](https://github.com/qmk/qmk_use
 so that I can experiment with layouts without the overhead of the full
 [QMK firmware repository](https://github.com/qmk/qmk_firmware/).
 
-I am also using this to host QMK firmware for any of my own keyboard PCBs
-(with a tweak to the GitHub Actions to compile these online):
+I am also using this to host QMK firmware for any of my own keyboard PCBs (with a
+`preparation_command` [tweak](/.github/workflows/build_binaries.yaml) to the GitHub
+Actions to compile these online):
 
 * [Tutte-Coxeter 36e](keyboards/tutte_coxeter_36e/readme.md) - my no-diode single
   PCB design for a monoblock split 3x5_3 design using Graph Theory (topology) to
