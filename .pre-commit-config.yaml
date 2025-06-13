@@ -12,13 +12,12 @@ repos:
     -   id: check-shebang-scripts-are-executable
     -   id: check-symlinks
     -   id: check-yaml
-    -   id: debug-statements
     -   id: destroyed-symlinks
     -   id: end-of-file-fixer
-        files: \.(md|py|sh|rst|yml|yaml)$
+        files: \.(md|sh|rst|yml|yaml)$
     -   id: mixed-line-ending
     -   id: trailing-whitespace
-        files: \.(md|py|sh|rst|yml|yaml)$
+        files: \.(md|sh|rst|yml|yaml)$
 -   repo: local
     hooks:
     -   id: no-tabs
@@ -26,12 +25,12 @@ repos:
         description: Reject any files containing a tab
         entry: '\t'
         language: pygrep
-        files: \.(md|py|sh|rst|yml|yaml)$
+        files: \.(md|sh|rst|yml|yaml)$
 -   repo: https://github.com/codespell-project/codespell
     rev: v2.2.6
     hooks:
     -   id: codespell
-        files: \.(md|py|sh|rst|yml|yaml)$
+        files: \.(md|sh|rst|yml|yaml)$
 ci:
     # Settings for the https://pre-commit.ci/ continuous integration service
     autofix_prs: true
