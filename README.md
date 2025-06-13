@@ -1,3 +1,17 @@
+# Peter's QMK Userspace fork
+
+This is my fork of the [QMK Userspace repository](https://github.com/qmk/qmk_userspace),
+so that I can experiment with layouts without the overhead of the full
+[QMK firmware repository](https://github.com/qmk/qmk_firmware/).
+
+I am also using this to host QMK firmware for any of my own keyboard PCBs
+(with a tweak to the GitHub Actions to compile these online):
+
+* [Tutte-Coxeter 36e](keyboards/tutte_coxeter_36e/readme.md) - my no-diode single
+  PCB design for a monoblock split 3x5_3 design using Graph Theory (topology) to
+  avoid ghosting. This has a sparse 13x13 scanning matrix (using 26 GPIO pins)
+  for 36 keys with 6-key rollover (the USB HID limit).
+
 # QMK Userspace
 
 This is a template repository which allows for an external set of QMK keymaps to be defined and compiled. This is useful for users who want to maintain their own keymaps without having to fork the main QMK repository.
