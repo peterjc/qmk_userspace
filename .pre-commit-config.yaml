@@ -1,0 +1,40 @@
+# pre-commit run --all-files
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+    -   id: check-added-large-files
+    -   id: check-case-conflict
+    -   id: check-executables-have-shebangs
+    -   id: check-json
+    -   id: check-merge-conflict
+    -   id: check-shebang-scripts-are-executable
+    -   id: check-symlinks
+    -   id: check-yaml
+    -   id: debug-statements
+    -   id: destroyed-symlinks
+    -   id: end-of-file-fixer
+        files: \.(md|py|sh|rst|yml|yaml)$
+    -   id: mixed-line-ending
+    -   id: trailing-whitespace
+        files: \.(md|py|sh|rst|yml|yaml)$
+-   repo: local
+    hooks:
+    -   id: no-tabs
+        name: No tabs
+        description: Reject any files containing a tab
+        entry: '\t'
+        language: pygrep
+        files: \.(md|py|sh|rst|yml|yaml)$
+-   repo: https://github.com/codespell-project/codespell
+    rev: v2.2.6
+    hooks:
+    -   id: codespell
+        files: \.(md|py|sh|rst|yml|yaml)$
+ci:
+    # Settings for the https://pre-commit.ci/ continuous integration service
+    autofix_prs: true
+    # Default message is more verbose
+    autoupdate_commit_msg: '[pre-commit.ci] autoupdate'
+    # Default is weekly
+    autoupdate_schedule: monthly
