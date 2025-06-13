@@ -1,5 +1,7 @@
 # Peter's QMK Userspace fork
 
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/peterjc/qmk_userspace/main.svg)](https://results.pre-commit.ci/latest/github/peterjc/qmk_userspace/main)
+
 This is my fork of the [QMK Userspace repository](https://github.com/qmk/qmk_userspace),
 so that I can experiment with layouts without the overhead of the full
 [QMK firmware repository](https://github.com/qmk/qmk_firmware/).
