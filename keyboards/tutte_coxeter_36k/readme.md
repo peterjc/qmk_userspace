@@ -10,8 +10,10 @@ design with a sparse 13 by 13 scanning matrix designed using a partial
 [blog post](https://astrobeano.blogspot.com/2025/05/ergo-mech-keyboard-wiring-using-tutte-coxeter-graph.html)
 for background, although the final pin selection and trace routing changed).
 
-The first physical PCB for this is designed to fit in the [Gamma Omega keyboard](https://github.com/unspecworks/gamma-omega) case,
-and use the same Raspberry Pi Pico based microcontroller board.
+The first physical PCB for this was designed using the [Gamma Omega
+keyboard](https://github.com/unspecworks/gamma-omega) footprint from Ergogen.
+This is intend use the same Raspberry Pi Pico YD-RP2040 microcontroller board
+to fit the same 3D printed case, including reset button placement.
 
 * Keyboard Maintainer: [Peter J. A. Cock](https://github.com/peterjc)
 * Hardware Supported: Tutte Coxeter 36k (single PCB) with Raspberry Pi Pico
