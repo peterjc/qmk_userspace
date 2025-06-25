@@ -17,7 +17,7 @@ to fit the same 3D printed case, including reset button placement.
 
 * Keyboard Maintainer: [Peter J. A. Cock](https://github.com/peterjc)
 * Hardware Supported: Tutte Coxeter 36k (single PCB) with Raspberry Pi Pico
-* Hardware Availability: https://github.com/peterjc/gamma-omega
+* Hardware Availability: https://github.com/unspecworks/gamma-omega/tree/main/tc36k
 
 Make example for this keyboard (after setting up your build environment):
 
