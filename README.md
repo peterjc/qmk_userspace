@@ -2,7 +2,7 @@
 
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/peterjc/qmk_userspace/main.svg)](https://results.pre-commit.ci/latest/github/peterjc/qmk_userspace/main)
 [![GitHub Actions status](https://github.com/peterjc/qmk_userspace/actions/workflows/build_binaries.yaml/badge.svg?branch=main)](https://github.com/peterjc/qmk_userspace//actions)
-  
+
 This is my fork of the [QMK Userspace repository](https://github.com/qmk/qmk_userspace),
 so that I can experiment with layouts without the overhead of the full
 [QMK firmware repository](https://github.com/qmk/qmk_firmware/).
