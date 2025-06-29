@@ -8,13 +8,18 @@ so that I can experiment with layouts without the overhead of the full
 [QMK firmware repository](https://github.com/qmk/qmk_firmware/).
 
 I am also using this to host QMK firmware for any of my own keyboard PCBs (with a
-[tweak](/.github/workflows/build_binaries.yaml) to the GitHub Actions
+[tweak](.github/workflows/build_binaries.yaml) to the GitHub Actions
 `preparation_command` to compile these online):
 
 * [Tutte-Coxeter 36k](keyboards/tutte_coxeter_36k/readme.md) - my no-diode single
   PCB design for a monoblock split 3x5_3 design using Graph Theory (topology) to
   avoid ghosting. This has a sparse 13x13 scanning matrix (using 26 GPIO pins)
   for 36 keys with 6-key rollover (the USB HID limit).
+
+In a further complication, the GitHub Actions setup is duplicated to
+[compile my Vial layouts](.github/workflows/build_vial_binaries.yaml) against
+the Vial fork of the QMK firmware repository. This uses [vial.json](vial.json)
+rather than [qmk.json](qmk.json) to list the layouts to build.
 
 # QMK Userspace
 
