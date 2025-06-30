@@ -15,9 +15,9 @@ so that I can experiment with keyboards and layouts without the overhead of the 
 Here are the [latest compiled firmwares](https://github.com/peterjc/qmk_userspace/releases/tag/latest)
 for my keyboards/layout compiled using [QMK Userspace GitHub
 Actions](.github/workflows/build_binaries.yaml) with a tweak to the compile new
-keyboards and *both* QMK and Vial layouts. That uses the [Vial fork of the QMK
-firmware](https://github.com/vial-kb/vial-qmk/) repository, and [vial.json](vial.json)
-rather than [qmk.json](qmk.json) lists the layouts to build.
+keyboard(s), and a second workflow to build the Vial layouts against the [Vial fork of
+the QMK firmware](https://github.com/vial-kb/vial-qmk/) repository, where
+[vial.json](vial.json) rather than [qmk.json](qmk.json) lists the layouts to build.
 
 ------------------------------------------------------------------------------
 
