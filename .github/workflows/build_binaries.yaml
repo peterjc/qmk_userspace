@@ -6,7 +6,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  build_qmk:
     name: 'QMK Userspace Build'
     uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@main
     with:
@@ -14,8 +14,16 @@ jobs:
       qmk_ref: master
       preparation_command: 'for KB in "$GITHUB_WORKSPACE/keyboards/*/"; do ln -s $KB qmk_firmware/keyboards/ ; done'
 
+  build_vial:
+    name: 'Vial Userspace Build'
+    uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@main
+    with:
+      qmk_repo: vial-kb/vial-qmk
+      qmk_ref: vial
+      preparation_command: 'cp $GITHUB_WORKSPACE/vial.json $GITHUB_WORKSPACE/qmk.json && for KB in "$GITHUB_WORKSPACE/keyboards/*/"; do ln -s $KB qmk_firmware/keyboards/ ; done'
+
   publish:
-    name: 'QMK Userspace Publish'
+    name: 'QMK/Vial Userspace Publish'
     uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@main
     if: always() && !cancelled()
-    needs: build
+    needs: [build_qmk, build_vial]
