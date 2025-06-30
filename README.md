@@ -4,22 +4,22 @@
 [![GitHub Actions status](https://github.com/peterjc/qmk_userspace/actions/workflows/build_binaries.yaml/badge.svg?branch=main)](https://github.com/peterjc/qmk_userspace//actions)
 
 This is my fork of the [QMK Userspace repository](https://github.com/qmk/qmk_userspace),
-so that I can experiment with layouts without the overhead of the full
-[QMK firmware repository](https://github.com/qmk/qmk_firmware/).
-
-I am also using this to host QMK firmware for any of my own keyboard PCBs (with a
-[tweak](.github/workflows/build_binaries.yaml) to the GitHub Actions
-`preparation_command` to compile these online):
+so that I can experiment with keyboards and layouts without the overhead of the full
+[QMK firmware repository](https://github.com/qmk/qmk_firmware/):
 
 * [Tutte-Coxeter 36k](keyboards/tutte_coxeter_36k/readme.md) - my no-diode single
   PCB design for a monoblock split 3x5_3 design using Graph Theory (topology) to
   avoid ghosting. This has a sparse 13x13 scanning matrix (using 26 GPIO pins)
   for 36 keys with 6-key rollover (the USB HID limit).
 
-In a further complication, the GitHub Actions setup is duplicated to
-[compile my Vial layouts](.github/workflows/build_vial_binaries.yaml) against
-the Vial fork of the QMK firmware repository. This uses [vial.json](vial.json)
-rather than [qmk.json](qmk.json) to list the layouts to build.
+Here are the [latest compiled firmwares](https://github.com/peterjc/qmk_userspace/releases/tag/latest)
+for my keyboards/layout compiled using [QMK Userspace GitHub
+Actions](.github/workflows/build_binaries.yaml) with a tweak to the compile new
+keyboards and *both* QMK and Vial layouts. That uses the [Vial fork of the QMK
+firmware](https://github.com/vial-kb/vial-qmk/) repository, and [vial.json](vial.json)
+rather than [qmk.json](qmk.json) lists the layouts to build.
+
+------------------------------------------------------------------------------
 
 # QMK Userspace
 
