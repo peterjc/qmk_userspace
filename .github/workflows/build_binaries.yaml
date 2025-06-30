@@ -25,5 +25,5 @@ jobs:
   publish:
     name: 'QMK/Vial Userspace Publish'
     uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@main
-    if: always() && !cancelled()
+    if: github.ref == 'refs/heads/main' && always() && !cancelled()
     needs: [build_qmk, build_vial]
