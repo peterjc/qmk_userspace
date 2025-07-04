@@ -26,7 +26,13 @@ for background, although the final pin selection and trace routing changed):
 | GP17 |      |      |     |     |     |      |      |   ,  |      |      |  R1  |   /  |      |
 | GP5  |      |      |     |  F  |     |      |      |      |      |      |      |   P  |  L3  |
 
-The keys here are labeled as per Qwerty, with L1, L2, L3, R3, R2, and R1 for the thumbs.
+The keys here are labeled as per Qwerty, with L1, L2, L3, R3, R2, and R1 for the thumbs:
+
+| Q | W |  E |  R |  T |   |  Y |  I |  O | U | P |
+|:-:|:-:|:--:|:--:|:--:|:-:|:--:|:--:|:--:|:-:|:-:|
+| A | S |  D |  F |  G |   |  H |  J |  K | L | ; |
+| Z | X |  C |  V |  B |   |  N |  M |  , | . | / |
+|   |   | L1 | L2 | L3 |   | R3 | R2 | R1 |   |   |
 
 The firmware follows the `LAYOUT_split_3x5_3` QMK community layout convention, making it much
 easier to use with an existing layout like Miryoku.
