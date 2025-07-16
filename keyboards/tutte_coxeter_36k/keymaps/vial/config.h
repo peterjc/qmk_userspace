@@ -6,6 +6,6 @@
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
 
 /* Original Gamma-Omega used keys 0,0 (Q) and 3,6 (P) */
-/* with our sparse matrix those are 1,0 (Q) and 12,11 (P) instead. */
-#define VIAL_UNLOCK_COMBO_ROWS { 1, 12 }
-#define VIAL_UNLOCK_COMBO_COLS { 0, 11 }
+/* with our sparse matrix those are 12,11 (Q) and 1,0 (P) instead. */
+#define VIAL_UNLOCK_COMBO_ROWS { 12, 1 }
+#define VIAL_UNLOCK_COMBO_COLS { 11, 0 }
