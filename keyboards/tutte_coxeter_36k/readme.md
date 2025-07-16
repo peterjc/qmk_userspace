@@ -12,19 +12,19 @@ for background, although the final pin selection and trace routing changed):
 
 |      | GP11 | GP10 | GP3 | GP4 | GP7 | GP26 | GP27 | GP28 | GP15 | GP21 | GP19 | GP20 | GP16 |
 |------|------|------|-----|-----|-----|------|------|------|------|------|------|------|------|
-| GP12 |   Z  |      |     |     |     |      |   J  |      |      |      |      |      |      |
-| GP8  |   Q  |   S  |     |     |     |      |      |      |      |      |      |   ;  |      |
-| GP9  |      |   X  |  C  |     |     |      |      |      |      |      |      |      |      |
-| GP1  |      |      |  D  |  R  |     |      |      |      |      |   O  |      |      |      |
-| GP6  |      |      |     |  V  |  G  |      |      |      |      |      |      |      |      |
-| GP2  |      |   W  |     |     |  T  |   Y  |      |      |      |      |      |      |      |
-| GP22 |      |      |     |     |     |   H  |   M  |      |      |      |      |      |  R3  |
-| GP0  |      |      |  E  |     |     |      |   U  |   I  |      |      |      |      |      |
-| GP13 |      |      |     |     |  B  |      |      |   K  |  L2  |      |      |      |      |
-| GP14 |   A  |      |     |     |     |      |      |      |  L1  |   L  |      |      |      |
-| GP18 |      |      |     |     |     |   N  |      |      |      |   .  |  R2  |      |      |
-| GP17 |      |      |     |     |     |      |      |   ,  |      |      |  R1  |   /  |      |
-| GP5  |      |      |     |  F  |     |      |      |      |      |      |      |   P  |  L3  |
+| GP12 |   /  |      |     |     |     |      |   F  |      |      |      |      |      |      |
+| GP8  |   P  |   L  |     |     |     |      |      |      |      |      |      |   A  |      |
+| GP9  |      |   .  |  ,  |     |     |      |      |      |      |      |      |      |      |
+| GP1  |      |      |  K  |  I  |     |      |      |      |      |   E  |      |      |      |
+| GP6  |      |      |     |  M  |  H  |      |      |      |      |      |      |      |      |
+| GP2  |      |   U  |     |     |  Y  |   T  |      |      |      |      |      |      |      |
+| GP22 |      |      |     |     |     |   G  |   B  |      |      |      |      |      |  L3  |
+| GP0  |      |      |  O  |     |     |      |   W  |   R  |      |      |      |      |      |
+| GP13 |      |      |     |     |  N  |      |      |   D  |  R2  |      |      |      |      |
+| GP14 |   ;  |      |     |     |     |      |      |      |  R1  |   S  |      |      |      |
+| GP18 |      |      |     |     |     |   B  |      |      |      |   X  |  L2  |      |      |
+| GP17 |      |      |     |     |     |      |      |   C  |      |      |  L1  |   Z  |      |
+| GP5  |      |      |     |  J  |     |      |      |      |      |      |      |   Q  |  R3  |
 
 The keys here are labeled as per Qwerty, with L1, L2, L3, R3, R2, and R1 for the thumbs:
 
@@ -60,6 +60,6 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 
 Enter the bootloader in 3 ways:
 
-* **Bootmagic reset**: Hold down the key at (0,0) in the matrix (bottom left key, Qwerty `z`) and plug in the keyboard
+* **Bootmagic reset**: Hold down the key at (0,0) in the matrix (bottom right key, Qwerty `/`) and plug in the keyboard
 * **Physical reset button**: Briefly press the button on the back of the controller (if physically accessible)
 * **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
