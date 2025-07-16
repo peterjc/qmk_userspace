@@ -39,8 +39,8 @@ easier to use with an existing layout like Miryoku.
 
 The first physical PCB for this was designed using the [Gamma Omega
 keyboard](https://github.com/unspecworks/gamma-omega) footprint from Ergogen.
-This is intend use the same Raspberry Pi Pico YD-RP2040 microcontroller board
-to fit the same 3D printed case, including reset button placement.
+That is intended for use with the same Raspberry Pi Pico YD-RP2040 microcontroller
+board in order to fit the same 3D printed case, including reset button placement.
 
 * Keyboard Maintainer: [Peter J. A. Cock](https://github.com/peterjc)
 * Hardware Supported: Tutte Coxeter 36k (single PCB) with Raspberry Pi Pico
