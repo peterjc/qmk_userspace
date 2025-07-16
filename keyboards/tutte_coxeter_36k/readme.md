@@ -10,21 +10,21 @@ This is firmware for a Raspberry Pi Pico PR2040 controller monoblock 36 key desi
 [blog post](https://astrobeano.blogspot.com/2025/05/ergo-mech-keyboard-wiring-using-tutte-coxeter-graph.html)
 for background, although the final pin selection and trace routing changed):
 
-|      | GP11 | GP10 | GP3 | GP4 | GP7 | GP26 | GP27 | GP28 | GP15 | GP21 | GP19 | GP20 | GP16 |
-|------|------|------|-----|-----|-----|------|------|------|------|------|------|------|------|
-| GP12 |   /  |      |     |     |     |      |   F  |      |      |      |      |      |      |
-| GP8  |   P  |   L  |     |     |     |      |      |      |      |      |      |   A  |      |
-| GP9  |      |   .  |  ,  |     |     |      |      |      |      |      |      |      |      |
-| GP1  |      |      |  K  |  I  |     |      |      |      |      |   E  |      |      |      |
-| GP6  |      |      |     |  M  |  H  |      |      |      |      |      |      |      |      |
-| GP2  |      |   U  |     |     |  Y  |   T  |      |      |      |      |      |      |      |
-| GP22 |      |      |     |     |     |   G  |   B  |      |      |      |      |      |  L3  |
-| GP0  |      |      |  O  |     |     |      |   W  |   R  |      |      |      |      |      |
-| GP13 |      |      |     |     |  N  |      |      |   D  |  R2  |      |      |      |      |
-| GP14 |   ;  |      |     |     |     |      |      |      |  R1  |   S  |      |      |      |
-| GP18 |      |      |     |     |     |   B  |      |      |      |   X  |  L2  |      |      |
-| GP17 |      |      |     |     |     |      |      |   C  |      |      |  L1  |   Z  |      |
-| GP5  |      |      |     |  J  |     |      |      |      |      |      |      |   Q  |  R3  |
+| GP   | 11 | 10 | 3 | 4 | 7 | 26 | 27 | 28 | 15 | 21 | 19 | 20 | 16 |
+|------|----|----|---|---|---|----|----|----|----|----|----|----|----|
+| GP12 |  / |    |   |   |   |    |  F |    |    |    |    |    |    |
+| GP8  |  P |  L |   |   |   |    |    |    |    |    |    |  A |    |
+| GP9  |    |  . | , |   |   |    |    |    |    |    |    |    |    |
+| GP1  |    |    | K | I |   |    |    |    |    |  E |    |    |    |
+| GP6  |    |    |   | M | H |    |    |    |    |    |    |    |    |
+| GP2  |    |  U |   |   | Y |  T |    |    |    |    |    |    |    |
+| GP22 |    |    |   |   |   |  G |  B |    |    |    |    |    | L3 |
+| GP0  |    |    | O |   |   |    |  W |  R |    |    |    |    |    |
+| GP13 |    |    |   |   | N |    |    |  D | R2 |    |    |    |    |
+| GP14 |  ; |    |   |   |   |    |    |    | R1 |  S |    |    |    |
+| GP18 |    |    |   |   |   |  B |    |    |    |  X | L2 |    |    |
+| GP17 |    |    |   |   |   |    |    |  C |    |    | L1 |  Z |    |
+| GP5  |    |    |   | J |   |    |    |    |    |    |    |  Q | R3 |
 
 The keys here are labeled as per Qwerty, with L1, L2, L3, R3, R2, and R1 for the thumbs:
 
