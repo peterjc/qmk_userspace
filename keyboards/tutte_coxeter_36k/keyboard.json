@@ -8,7 +8,7 @@
         "bootmagic": true,
         "extrakey": true,
         "mousekey": true,
-        "nkro": true
+        "nkro": false
     },
     "matrix_pins": {
         "cols": ["GP11", "GP10", "GP3", "GP4", "GP7", "GP26", "GP27", "GP28", "GP15", "GP21", "GP19", "GP20", "GP16"],
