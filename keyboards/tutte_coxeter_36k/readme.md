@@ -11,7 +11,7 @@ This is firmware for a Raspberry Pi Pico PR2040 controller monoblock 36 key desi
 for background, although the final pin selection and trace routing changed).
 
 This matrix shows the full 15×15 Tutte-Coxeter bipartite scanning matrix with the
-two unused rows and columns last (❌), and the further 9 keys this would allow (⭕) 
+two unused rows and columns last (❌), and the further 9 keys this would allow (⭕)
 if using 30 GPIOs rather than just 26 for a 13×13 scanning matrix. The allocation
 of keys to matrix elements and scanning matrix rows and columns to GPIO pins was
 arbitrary and down to how best to layout the PCB traces:
