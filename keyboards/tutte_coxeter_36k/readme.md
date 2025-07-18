@@ -1,4 +1,4 @@
-# Tutte Coxeter 36k
+# Tutte-Coxeter 36k
 
 ![Partial Tutte-Coxeter Graph (26/30 vertices, 36/45 edges)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvS5QfAl7YotptMtpu0nG8XOHOsqG2vocUFF2sRgrn_QwAcUQNhDkctHt_42rQor3Bb5tbAW6FiOsYqv2craP086HMTuAqWk9U0A4yOeEsQkhyphenhyphenUxoayJWf5e-N3_Jg1TC1p9YAiVPTK02pEVCUu3hl72REIk5BAjXgZGoF7T-NWQ28iRirwFs6yzFzAe0/w200-h194/Screenshot%202025-05-28%20at%2014.59.35.png)
 
@@ -31,8 +31,8 @@ arbitrary and down to how best to layout the PCB traces:
 | 18 |    |    |   |   |   |  B |    |    |    |  X | L2 |    |    |    |    |
 | 17 |    |    |   |   |   |    |    |  C |    |    | L1 |  Z |    |    |    |
 | 5  |    |    |   | J |   |    |    |    |    |    |    |  Q | R3 |    |    |
-| ❌   |    |    |   |   |   |    |    |    | ⭕ |    |    |    | ⭕  | ⭕ |    |
-| ❌   |    |    |   |   |   |    |    |    |    |    | ⭕ |    |    | ⭕  | ⭕ |
+| ❌ |    |    |   |   |   |    |    |    | ⭕ |    |    |    | ⭕  | ⭕ |    |
+| ❌ |    |    |   |   |   |    |    |    |    |    | ⭕ |    |    | ⭕  | ⭕ |
 
 The keys here are labeled as per Qwerty, with L1, L2, L3, R3, R2, and R1 for the thumbs:
 
