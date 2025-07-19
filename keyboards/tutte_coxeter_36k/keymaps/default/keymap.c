@@ -54,8 +54,7 @@ const rgblight_segment_t PROGMEM my_layer3_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 // Now define the array of layers. Later layers take precedence
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     my_capslock_layer,
-    my_layer0_layer,    // Overrides caps lock layer
-    my_layer2_layer,    // Overrides other layers
+    my_layer1_layer,    // Overrides caps lock layer
     my_layer2_layer,    // Overrides other layers
     my_layer3_layer     // Overrides other layers
 );
@@ -73,7 +72,6 @@ bool led_update_user(led_t led_state) {
 
 layer_state_t default_layer_state_set_user(layer_state_t state) {
     // Light up based on the layer
-    rgblight_set_layer_state(1, layer_state_cmp(state, 0)); // Layer 0 active
     rgblight_set_layer_state(2, layer_state_cmp(state, 1)); // Layer 1 active
     rgblight_set_layer_state(3, layer_state_cmp(state, 2)); // Layer 2 active
     rgblight_set_layer_state(4, layer_state_cmp(state, 3)); // Layer 3 active
