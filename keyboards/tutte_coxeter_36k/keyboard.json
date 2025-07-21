@@ -10,6 +10,13 @@
         "mousekey": true,
         "nkro": false
     },
+    "ws2812": {
+        "pin": "GP23",
+        "driver": "vendor"
+    },
+    "rgblight": {
+        "led_count": 1
+    },
     "matrix_pins": {
         "cols": ["GP11", "GP10", "GP3", "GP4", "GP7", "GP26", "GP27", "GP28", "GP15", "GP21", "GP19", "GP20", "GP16"],
         "rows": ["GP12", "GP8", "GP9", "GP1", "GP6", "GP2", "GP22", "GP0", "GP13", "GP14", "GP18", "GP17", "GP5"]
