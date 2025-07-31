@@ -10,7 +10,7 @@ so that I can experiment with keyboards and layouts without the overhead of the 
 * [Tutte-Coxeter 36k](keyboards/tutte_coxeter_36k/readme.md) - my no-diode single
   PCB design for a monoblock split 3x5_3 design using Graph Theory (topology) to
   avoid ghosting. This has a sparse 13x13 scanning matrix (using 26 GPIO pins)
-  for 36 keys with 6-key rollover (the USB HID limit).
+  for 36 keys with 6-key rollover.
 
 Here are the [latest compiled firmwares](https://github.com/peterjc/qmk_userspace/releases/tag/latest)
 for my keyboards/layout compiled using [QMK Userspace GitHub
