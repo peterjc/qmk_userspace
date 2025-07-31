@@ -1,7 +1,7 @@
 {
-    "manufacturer": "Peter J. A. Cock",
+    "manufacturer": "peterjc",
     "keyboard_name": "tutte_coxeter_36k",
-    "maintainer": "peterjc",
+    "maintainer": "Peter J. A. Cock",
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
     "features": {
