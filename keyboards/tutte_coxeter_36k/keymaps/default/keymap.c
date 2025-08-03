@@ -28,3 +28,44 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                 KC_DEL,             KC_TAB,             KC_SPC,    KC_ENT,   KC_ESC,             KC_BSPC
     )
 };
+
+// Only have one LED at index zero:
+const rgblight_segment_t PROGMEM my_num_lock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, 1, HSV_CYAN}
+);
+const rgblight_segment_t PROGMEM my_caps_lock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, 1, HSV_BLUE}
+);
+const rgblight_segment_t PROGMEM my_scroll_lock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, 1, HSV_PURPLE}
+);
+const rgblight_segment_t PROGMEM my_compose_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, 1, HSV_ORANGE}
+);
+const rgblight_segment_t PROGMEM my_kana_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, 1, HSV_GREEN}
+);
+// etc...
+
+// Now define the array of layers. Later layers take precedence
+const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
+    my_num_lock_layer,
+    my_caps_lock_layer,
+    my_scroll_lock_layer,
+    my_compose_layer,
+    my_kana_layer
+);
+
+void keyboard_post_init_user(void) {
+    // Enable the LED layers
+    rgblight_layers = my_rgb_layers;
+}
+
+bool led_update_user(led_t led_state) {
+    rgblight_set_layer_state(0, led_state.num_lock);
+    rgblight_set_layer_state(1, led_state.caps_lock);
+    rgblight_set_layer_state(2, led_state.scroll_lock);
+    rgblight_set_layer_state(3, led_state.compose);
+    rgblight_set_layer_state(4, led_state.kana);
+    return true;
+}
