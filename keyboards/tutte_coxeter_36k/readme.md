@@ -42,13 +42,14 @@ The keys here are labeled as per Qwerty, with L1, L2, L3, R3, R2, and R1 for the
 | Z | X |  C |  V |  B |   |  N |  M |  , | . | / |
 |   |   | L1 | L2 | L3 |   | R3 | R2 | R1 |   |   |
 
-The firmware follows the `LAYOUT_split_3x5_3` QMK community layout convention, making it much
-easier to use with an existing layout like Miryoku.
-
 The first physical PCB for this was designed using the [Gamma Omega
 keyboard](https://github.com/unspecworks/gamma-omega) footprint from Ergogen.
 That is intended for use with the same Raspberry Pi Pico YD-RP2040 microcontroller
 board in order to fit the same 3D printed case, including reset button placement.
+
+The QMK firmware follows the `LAYOUT_split_3x5_3` QMK community layout convention, making
+it much easier to use with an existing layout like Miryoku. Also, the Raspberry Pi Pico
+controller's user LED on GPIO pin 25 is set to show the Caps Lock state.
 
 * Keyboard Maintainer: [Peter J. A. Cock](https://github.com/peterjc)
 * Hardware Supported: Gamma Omega TC36K (no-diode single PCB) using Raspberry Pi Pico
