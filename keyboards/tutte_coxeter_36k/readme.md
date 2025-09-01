@@ -1,4 +1,4 @@
-# Tutte-Coxeter 36K
+# Gamma-Omega T36K (Tutte Coxeter 36 keys)
 
 This is firmware for a Raspberry Pi Pico PR2040 controller monoblock 36 key design
 (split 3x5_3 - three rows of five, and three thumb keys, for each hand). This is a
