@@ -51,7 +51,7 @@ controller's user LED on GPIO pin 25 is set to show the Caps Lock state.
 * Hardware Supported: Gamma Omega TC36K (no-diode single PCB) using Raspberry Pi Pico
 * Hardware Availability: https://github.com/unspecworks/gamma-omega/tree/main/tc36k
 
-See also the [TC36K ZMK firmware](https://github.com/peterjc/zmk-keyboard-firmware/tree/main/boards/shields/tc36k).
+See also the [TC36K ZMK firmware](https://github.com/peterjc/zmk-keyboard-graph-theory/tree/main/boards/shields/tc36k).
 
 Make example for this keyboard (after setting up your build environment):
 
