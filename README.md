@@ -5,21 +5,23 @@
 
 This is my fork of the [QMK Userspace repository](https://github.com/qmk/qmk_userspace),
 so that I can experiment with keyboards and layouts without the overhead of the full
-[QMK firmware repository](https://github.com/qmk/qmk_firmware/):
+[QMK firmware repository](https://github.com/qmk/qmk_firmware/). My keyboard PCB designs:
 
-* [Tutte-Coxeter 36k](keyboards/tutte_coxeter_36k/readme.md) - my no-diode single
+* [Gamma Omega TC36K](keyboards/tutte_coxeter_36k/readme.md) - a no-diode single
   PCB design for a monoblock split 3x5_3 design using Graph Theory (topology) to
   avoid ghosting. This has a sparse 13x13 scanning matrix (using 26 GPIO pins)
   for 36 keys with 6-key rollover.
-    * Download Firmware pre-compiled with Vial support:
-      [tutte_coxeter_36k_vial.uf2](https://github.com/peterjc/qmk_userspace/releases/download/latest/tutte_coxeter_36k_vial.uf2)
 
-Here are all the [latest compiled firmwares](https://github.com/peterjc/qmk_userspace/releases/tag/latest)
-for my keyboards/layout compiled using [QMK Userspace GitHub
-Actions](.github/workflows/build_binaries.yaml) with a tweak to the compile new
-keyboard(s), and a second workflow to build the Vial layouts against the [Vial fork of
-the QMK firmware](https://github.com/vial-kb/vial-qmk/) repository, where
-[vial.json](vial.json) rather than [qmk.json](qmk.json) lists the layouts to build.
+You can [download pre-compiled firmware](https://github.com/peterjc/qmk_userspace/releases).
+The 'offical' release is recommended, the 'latest' binaries may contain experimental changes.
+The versions with Vial support are strongly recommended as you can the use the
+[Vial GUI tool](https://get.vial.today/) to configure your layout by point-and-click
+(the default layout is deliberately very minimal).
+
+These are compiled using [QMK Userspace GitHub Actions](.github/workflows/build_binaries.yaml)
+with a tweak to the compile new keyboard(s), and a second workflow to build the Vial layouts
+against the [Vial fork of the QMK firmware](https://github.com/vial-kb/vial-qmk/) repository,
+where [vial.json](vial.json) rather than [qmk.json](qmk.json) lists the layouts to build.
 
 ------------------------------------------------------------------------------
 
