@@ -11,8 +11,10 @@ so that I can experiment with keyboards and layouts without the overhead of the 
   PCB design for a monoblock split 3x5_3 design using Graph Theory (topology) to
   avoid ghosting. This has a sparse 13x13 scanning matrix (using 26 GPIO pins)
   for 36 keys with 6-key rollover.
+    * Download Firmware pre-compiled with Vial support:
+      [tutte_coxeter_36k_vial.uf2](https://github.com/peterjc/qmk_userspace/releases/download/latest/tutte_coxeter_36k_vial.uf2)
 
-Here are the [latest compiled firmwares](https://github.com/peterjc/qmk_userspace/releases/tag/latest)
+Here are all the [latest compiled firmwares](https://github.com/peterjc/qmk_userspace/releases/tag/latest)
 for my keyboards/layout compiled using [QMK Userspace GitHub
 Actions](.github/workflows/build_binaries.yaml) with a tweak to the compile new
 keyboard(s), and a second workflow to build the Vial layouts against the [Vial fork of
