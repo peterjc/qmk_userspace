@@ -49,8 +49,11 @@ controller's user LED on GPIO pin 25 is set to show the Caps Lock state.
 * Keyboard Maintainer: [Peter J. A. Cock](https://github.com/peterjc)
 * Hardware Supported: Gamma Omega TC36K (no-diode single PCB) using Raspberry Pi Pico
 * Hardware Availability: https://github.com/unspecworks/gamma-omega/tree/main/tc36k
+* Download Firmware pre-compiled with Vial support: [tutte_coxeter_36k_vial.uf2](https://github.com/peterjc/qmk_userspace/releases/download/latest/tutte_coxeter_36k_vial.uf2)
 
 See also the [TC36K ZMK firmware](https://github.com/peterjc/zmk-keyboard-graph-theory/tree/main/boards/shields/tc36k).
+
+## Compiling
 
 Make example for this keyboard (after setting up your build environment):
 
