@@ -13,7 +13,7 @@ so that I can experiment with keyboards and layouts without the overhead of the 
   for 36 keys with 6-key rollover.
 
 You can [download pre-compiled firmware](https://github.com/peterjc/qmk_userspace/releases).
-The 'offical' release is recommended, the 'latest' binaries may contain experimental changes.
+An 'offical' release is recommended, the 'latest' binaries may contain experimental changes.
 The versions with Vial support are strongly recommended as you can the use the
 [Vial GUI tool](https://get.vial.today/) to configure your layout by point-and-click
 (the default layout is deliberately very minimal).
