@@ -1,6 +1,7 @@
 {
     "userspace_version": "1.1",
     "build_targets": [
-        ["tutte_coxeter_36k", "vial"]
+        ["tutte_coxeter_36k", "vial"],
+        ["slump52", "vial"]
     ]
 }
