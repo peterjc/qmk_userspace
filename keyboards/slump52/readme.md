@@ -16,8 +16,8 @@ This is a *diode-free* design with a sparse 13 by 13 scanning matrix designed us
 for background.
 
 This matrix shows the 13×13 PG(2,3) bipartite scanning matrix in Paige-Wexler
-normal form. The keys are assign so the scanning column order roughly matches
-the physical columns (starting with Escape, A, Z, tab as the first column), with
+normal form. The keys are assigned so the scanning column order roughly matches
+the physical columns (starting with Escape, Q, A, Z, as the first column), with
 the scanning rows sorted to ensure Escape is top left as the first matrix entry.
 The allocation of keys to matrix elements and scanning matrix rows and columns
 to GPIO pins was arbitrary and down to how easy it was to layout the PCB traces:
