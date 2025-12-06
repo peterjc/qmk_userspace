@@ -1,0 +1,86 @@
+# Draw keymap diagrams using keymap-drawer QMK keymap.c to JSON workflow
+# See https://github.com/caksoylar/keymap-drawer/issues/177
+# Output to folder keymap-drawer/
+name: Draw QMK keymaps
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'keyboards/*/keymaps/*/keymap.c'
+      - 'keyboards/*/keyboard.json'
+      - 'keymap_drawer.config.yaml'
+      - '.github/workflows/draw-keymaps.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Draw keymaps
+    runs-on: ubuntu-latest
+    container: ghcr.io/qmk/qmk_cli:latest
+
+    steps:
+      - name: Checkout Userspace
+        uses: actions/checkout@v4
+        with:
+          token: ${{ github.token }}
+          submodules: recursive
+
+      - name: Check if qmk_firmware exists
+        id: check_files
+        uses: andstor/file-existence-action@v3
+        with:
+          files: qmk_firmware
+
+      - name: Checkout QMK Firmware
+        uses: actions/checkout@v4
+        if: steps.check_files.outputs.files_exists == 'false'
+        with:
+          token: ${{ github.token }}
+          path: qmk_firmware
+          repository: ${{ inputs.qmk_repo || 'qmk/qmk_firmware' }}
+          ref: ${{ inputs.qmk_ref || 'master' }}
+          submodules: recursive
+
+      - name: Install QMK CLI dependencies
+        run: |
+          echo '$PATH'
+          echo $PATH | tr ':' '\n' | sed -e 's/^/ - /g'
+          pip install -r qmk_firmware/requirements.txt
+
+      - name: Configure QMK CLI
+        run: |
+          qmk config userspace_compile.parallel=$(nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || getconf _NPROCESSORS_ONLN 2>/dev/null)
+          qmk config user.qmk_home=$GITHUB_WORKSPACE/qmk_firmware
+          qmk config user.overlay_dir=$GITHUB_WORKSPACE
+
+      - name: Validate userspace
+        run: |
+          qmk userspace-doctor
+
+      - name: JSON from keymap.c
+        run: |
+          qmk c2json --no-cpp keyboards/slump52/keymaps/default/keymap.c > keyboards/slump52/keymap.json
+
+      - name: Install keymap-drawer
+        run: |
+          pip install keymap-drawer
+
+      - name: keymap-drawer
+        run: |
+          keymap -c keymap_drawer.config.yaml parse -q keyboards/slump52/keymap.json | keymap -c keymap_drawer.config.yaml draw -j keyboards/slump52/keyboard.json - -o keymap-drawer/slump52.svg
+
+      - name: Clean-up
+        run: |
+          rm -rf /__w/qmk_userspace/qmk_userspace
+
+      - name: Check-in keymap
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          file_pattern: 'keymap-drawer/*.svg'
+          skip_dirty_check: true
+          commit_message: |
+            Automatic keymap-drawer render
+
+             [ci skip]
