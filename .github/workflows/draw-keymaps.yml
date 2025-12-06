@@ -27,9 +27,11 @@ jobs:
           submodules: true
       - run: docker pull ghcr.io/qmk/qmk_cli
       - uses: actions/checkout@v4
-      - run: docker run -v .:/qmk_firmware ghcr.io/qmk/qmk_cli qmk c2json --no-cpp keyboards/slum52/keymaps/default/keymapc.c > keyboards/slump52/keymap.json
-      - run: keymap  -c keymap_drawer.config.yaml parse -q keyboards/slump52/keymap.json > keyboards/slump52/keymap.yaml
-      - run: keymap  -c keymap_drawer.config.yaml draw -j keyboards/slump52/keyboard.json keyboards/slump52/keymap.yaml > keymap-drawer/slump52.svg
+        with:
+          path: .
+      - run: docker run -v .:/qmk_firmware ghcr.io/qmk/qmk_cli qmk c2json --no-cpp keyboards/slump52/keymaps/default/keymapc.c > keyboards/slump52/keymap.json
+      - run: keymap -c keymap_drawer.config.yaml parse -q keyboards/slump52/keymap.json > keyboards/slump52/keymap.yaml
+      - run: keymap -c keymap_drawer.config.yaml draw -j keyboards/slump52/keyboard.json keyboards/slump52/keymap.yaml > keymap-drawer/slump52.svg
       - uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: |
