@@ -1,0 +1,39 @@
+# Draw keymap diagrams using keymap-drawer QMK keymap.c to JSON workflow
+# See https://github.com/caksoylar/keymap-drawer/issues/177
+name: Draw QMK keymaps
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'keyboards/*/keymaps/*/keymap.c'
+      - 'keyboards/*/keyboard.json'
+      - 'keymap_drawer.config.yaml'
+      - '.github/workflows/draw-keymaps.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install keymap-drawer
+      - uses: actions/checkout@v4
+        with:
+          repository: qmk/qmk_firmware
+          submodules: true
+      - run: docker pull ghcr.io/qmk/qmk_cli
+      - uses: actions/checkout@v4
+      - run: docker run -v .:/qmk_firmware ghcr.io/qmk/qmk_cli qmk c2json --no-cpp keyboards/slum52/keymaps/default/keymapc.c > keyboards/slump52/keymap.json
+      - run: keymap  -c keymap_drawer.config.yaml parse -q keyboards/slump52/keymap.json > keyboards/slump52/keymap.yaml
+      - run: keymap  -c keymap_drawer.config.yaml draw -j keyboards/slump52/keyboard.json keyboards/slump52/keymap.yaml > keymap-drawer/slump52.svg
+      - uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          commit_message: |
+            Automatic keymap-drawer render
+
+             [ci skip]
+          fail_on_error: true
