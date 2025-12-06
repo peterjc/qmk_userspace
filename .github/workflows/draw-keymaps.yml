@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   build:
-    name: Build Userspace Firmware
+    name: Draw keymaps
     runs-on: ubuntu-latest
     container: ghcr.io/qmk/qmk_cli:latest
 
@@ -60,11 +60,11 @@ jobs:
 
       - name: JSON from keymap.c
         run: |
-          qmk c2json --no-cpp keyboards/slump52/keymaps/default/keymapc.c > keyboards/slump52/keymap.json
+          qmk c2json --no-cpp keyboards/slump52/keymaps/default/keymap.c > keyboards/slump52/keymap.json
 
       - name: keymap-drawer
         run: |
-          keymap -c keymap_drawer.config.yaml parse -q keyboards/slump52/keymap.json |  keymap -c keymap_drawer.config.yaml draw -j keyboards/slump52/keyboard.json keyboards/slump52/keymap.yaml > keymap-drawer/slump52.svg
+          keymap -c keymap_drawer.config.yaml parse -q keyboards/slump52/keymap.json | keymap -c keymap_drawer.config.yaml draw -j keyboards/slump52/keyboard.json keyboards/slump52/keymap.yaml > keymap-drawer/slump52.svg
 
       - uses: stefanzweifel/git-auto-commit-action@v6
         with:
