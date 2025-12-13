@@ -73,7 +73,7 @@ jobs:
 
       - name: Clean-up
         run: |
-          rm -rf /__w/qmk_userspace/qmk_userspace
+          git config --global --add safe.directory /__w/qmk_userspace/qmk_userspace
 
       - name: Check-in keymap
         uses: stefanzweifel/git-auto-commit-action@v7
