@@ -51,7 +51,8 @@ plus the cursors (in a standard inverted-tee layout, not a row):
 This default layout replaces Qwerty semicolon/colon with hyphen/underscore (for
 use with the numpad as minus), adds an extra key below slash/question-mark (used
 for division with the numpad) for multiplication, and places the equals-sign/plus
-key at the top of this column (but with plus by default and equals with shift).
+key at the top of this column (with a QMK override this can be plus by default,
+and equals with shift).
 
 The suggested thumb keys are backspace, shift, and space. The keys labeled as
 `Tab` (left) and `*` (right) could be used as a pinky shift instead (or when held).
