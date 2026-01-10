@@ -5,7 +5,7 @@ You can [download pre-compiled Slump52 firmware](https://github.com/peterjc/qmk_
 [Vial GUI tool](https://get.vial.today/) to configure your layout by point-and-click.
 This is the default keymap:
 
-![Default keymap for the Slump52 keyboard ZMK firmware](../../keymap-drawer/slump52.svg)
+![Default keymap for the Slump52 keyboard QMK firmware](../../keymap-drawer/slump52.svg)
 
 This is firmware for a Raspberry Pi Pico PR2040 controller monoblock 52 key design
 (split 3x5 - three rows of five, with thumb keys, cursors, and numpad),
