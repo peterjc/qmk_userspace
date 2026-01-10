@@ -5,7 +5,7 @@ You can [download pre-compiled TC36K firmware](https://github.com/peterjc/qmk_us
 the [Vial GUI tool](https://get.vial.today/) to configure your layout by point-and-click.
 This is the default keymap:
 
-![Default keymap for the Slump52 keyboard ZMK firmware](../../keymap-drawer/tutte_coxeter_36k.svg)
+![Default keymap for the Slump52 keyboard QMK firmware](../../keymap-drawer/tutte_coxeter_36k.svg)
 
 This is firmware for a Raspberry Pi Pico PR2040 controller monoblock 36 key design
 (split 3x5_3 - three rows of five, and three thumb keys, for each hand): the
