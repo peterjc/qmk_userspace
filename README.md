@@ -16,6 +16,9 @@ so that I can experiment with keyboards and layouts without the overhead of the 
   26 GPIO pins for 52 keys in a sparse 13x13 scanning matrix with only 4-key roll-over
   using the Incidence Graph of the Projective Plane of order 3, PG(2,3).
 
+* [Bivvy16D](keyboards/bivvy16d/readme.md), a Graph Theory based diode-free *wired* split
+  keyboard using 17 GPIOs for 16 keys and a 5-way directional button on each half.
+
 You can [download pre-compiled firmware](https://github.com/peterjc/qmk_userspace/releases).
 An 'offical' release is recommended, the 'latest' binaries may contain experimental changes.
 The versions with Vial support are strongly recommended as you can the use the
