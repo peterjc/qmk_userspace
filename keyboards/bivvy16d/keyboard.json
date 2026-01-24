@@ -22,7 +22,6 @@
         "vid": "0xFEED"
     },
     "split": {
-        "soft_serial_pin": "GP12",
         "bootmagic": {
             "matrix": [0, 0]
         }
