@@ -8,8 +8,7 @@ permissions:
 jobs:
   build:
     name: 'QMK Userspace Build'
-    #uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@main
-    uses: bcat/qmk.github/.github/workflows/qmk_userspace_build.yml@userspace-compile-p
+    uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@main
     with:
       qmk_repo: qmk/qmk_firmware
       qmk_ref: master
