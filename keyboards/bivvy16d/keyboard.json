@@ -28,7 +28,7 @@
         }
     },
     "layouts": {
-        "LAYOUT_L16R16": {
+        "LAYOUT_default": {
             "layout": [
                 {"label": "q", "hand": "L", "matrix": [0, 0], "x": 0.32, "y": 0.37, "r": 10.0, "rx": 0.82, "ry": 0.87 },
                 {"label": "w", "hand": "L", "matrix": [0, 1], "x": 1.4, "y": 0.05, "r": 10.0, "rx": 1.9, "ry": 0.55 },
