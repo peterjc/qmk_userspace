@@ -1,9 +1,5 @@
 #pragma once
 
-/* The GPIO pins used for full duplex split communication */
-#define SERIAL_USART_TX_PIN GP12
-#define SERIAL_USART_RX_PIN GP13
-
 /* Randomly generated as per Vial docs */
 #define VIAL_KEYBOARD_UID {0x1C, 0xF4, 0xA2, 0x03, 0x11, 0x30, 0xC7, 0x51}
 
