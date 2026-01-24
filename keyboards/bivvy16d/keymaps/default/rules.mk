@@ -1,4 +1,4 @@
-SERIAL_DRIVER = usart
+SERIAL_DRIVER = vendor
 
 VIA_ENABLE = yes
 VIAL_ENABLE = yes
