@@ -1,11 +1,11 @@
 # Bivvy16D keyboard firmware
 
 You can [download pre-compiled Bivvy16D firmware](https://github.com/peterjc/qmk_userspace/releases),
-`XXXXXXXXXX.uf2` and `XXXXXXXXXX.uf2` with Vial support is recommended as you can the use
-the [Vial GUI tool](https://get.vial.today/) to configure your layout by point-and-click.
-This is the default keymap:
+`bivvy16d_left_vial.uf2` and `bivvy16d_right_vial.uf2` with Vial support is recommended as
+you can the use the [Vial GUI tool](https://get.vial.today/) to configure your layout by
+point-and-click. This is the default keymap:
 
-![Default keymap for the Slump52 keyboard QMK firmware](../../keymap-drawer/bivvy16d.svg)
+![Default keymap for the Bivvy16D keyboard QMK firmware](../../keymap-drawer/bivvy16d.svg)
 
 This is firmware for a Waveshare Raspberry Pi PR2040-Zero controller *wired split*
 32 key design with a 5-way directional button on each half,
@@ -21,8 +21,8 @@ for background and this
 for the specifics of this keyboard's wiring.
 
 The Bivvy16D can be built wireless with a pair of "nRF25840 Zero" Bluetooth controllers with
-ZMK firmware, or *wired* with a pair of WaveShare RP2040-Zero controllers with either ZMK or
-(this) QMK firmware.
+ZMK firmware (not QMK), or *wired* with a pair of WaveShare RP2040-Zero controllers with
+either ZMK or (this) QMK firmware.
 
 This matrix shows the 9×8 bipartite scanning matrix for either half, with the Raspberry Pi
 "Zero" controller GPIO pins. The pin allocation was arbitrary and down to how easy it was to

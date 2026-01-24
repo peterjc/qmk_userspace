@@ -15,11 +15,17 @@
         "rows": ["GP2", "GP6", "GP8", "GP3", "GP9", "GP15", "GP29", "GP0", "GP27"]
     },
     "processor": "RP2040",
-    "url": "",
+    "url": "https://codeberg.org/peterjc/pico-keyboards/src/branch/main/bivvy16d",
     "usb": {
         "device_version": "1.0.0",
         "pid": "0x0000",
         "vid": "0xFEED"
+    },
+    "split": {
+        "soft_serial_pin": "GP12",
+        "bootmagic": {
+            "matrix": [0, 0]
+        }
     },
     "layouts": {
         "LAYOUT_L16R16": {
