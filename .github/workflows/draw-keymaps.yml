@@ -73,6 +73,7 @@ jobs:
 
       - name: Clean-up
         run: |
+          rm keyboards/*/keymap.json
           git config --global --add safe.directory /__w/qmk_userspace/qmk_userspace
 
       - name: Check-in keymap
