@@ -1,7 +1,7 @@
 # Bivvy16D keyboard firmware
 
 You can [download pre-compiled Bivvy16D firmware](https://github.com/peterjc/qmk_userspace/releases),
-`bivvy16d_left_vial.uf2` and `bivvy16d_right_vial.uf2` with Vial support is recommended as
+`bivvy16d_vial.uf2` (use on both halves) with Vial support is recommended as
 you can the use the [Vial GUI tool](https://get.vial.today/) to configure your layout by
 point-and-click. This is the default keymap:
 
