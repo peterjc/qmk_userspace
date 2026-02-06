@@ -42,8 +42,8 @@
     },
     "lighting": "none",
     "matrix": {
-        "cols": 5,
-        "rows": 10
+        "cols": 8,
+        "rows": 19
     },
     "name": "Bivvy16D"
 }
