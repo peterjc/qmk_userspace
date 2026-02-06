@@ -5,7 +5,8 @@
 
 This is my fork of the [QMK Userspace repository](https://github.com/qmk/qmk_userspace),
 so that I can experiment with keyboards and layouts without the overhead of the full
-[QMK firmware repository](https://github.com/qmk/qmk_firmware/). My keyboard PCB designs:
+[QMK firmware repository](https://github.com/qmk/qmk_firmware/). My QMK compatible
+keyboard PCB designs:
 
 * [Gamma Omega TC36K](keyboards/tutte_coxeter_36k/readme.md) - a no-diode single
   PCB design for a monoblock split 3x5_3 design using Graph Theory (topology) to
