@@ -42,12 +42,12 @@ const uint16_t PROGMEM combo_Z[] = {KC_QUOT,KC_MINS,COMBO_END};
 const uint16_t PROGMEM combo_tab[] = {KC_F,KC_D,KC_L,COMBO_END};
 const uint16_t PROGMEM combo_ent[] = {KC_U,KC_O,KC_Y,COMBO_END};
 // 2-key horizontal HRM
-// const uint16_t PROGMEM combo_lalt[] = {KC_S,KC_N,COMBO_END};
-// const uint16_t PROGMEM combo_lctl[] = {KC_N,KC_T,COMBO_END};
-// const uint16_t PROGMEM combo_lgui[] = {KC_T,KC_H,COMBO_END};
-// const uint16_t PROGMEM combo_ralt[] = {KC_C,KC_I,COMBO_END};
-// const uint16_t PROGMEM combo_rctl[] = {KC_I,KC_E,COMBO_END};
-// const uint16_t PROGMEM combo_rgui[] = {KC_E,KC_A,COMBO_END};
+const uint16_t PROGMEM combo_lalt[] = {KC_S,KC_N,COMBO_END};
+const uint16_t PROGMEM combo_lctl[] = {KC_N,KC_T,COMBO_END};
+const uint16_t PROGMEM combo_lgui[] = {KC_T,KC_H,COMBO_END};
+const uint16_t PROGMEM combo_ralt[] = {KC_C,KC_I,COMBO_END};
+const uint16_t PROGMEM combo_rctl[] = {KC_I,KC_E,COMBO_END};
+const uint16_t PROGMEM combo_rgui[] = {KC_E,KC_A,COMBO_END};
 
 combo_t key_combos[] = {
   COMBO(combo_Q, KC_Q),
@@ -58,12 +58,12 @@ combo_t key_combos[] = {
   COMBO(combo_tab, KC_TAB),
   COMBO(combo_ent, KC_ENT),
   // 2-key horizontal HRM
-  // COMBO(combo_lalt, KC_LALT),
-  // COMBO(combo_lctl, KC_LCTL),
-  // COMBO(combo_lgui, KC_LGUI),
-  // COMBO(combo_ralt, KC_RALT),
-  // COMBO(combo_rctl, KC_RCTL),
-  // COMBO(combo_rgui, KC_RGUI),
+  COMBO(combo_lalt, KC_LALT),
+  COMBO(combo_lctl, KC_LCTL),
+  COMBO(combo_lgui, KC_LGUI),
+  COMBO(combo_ralt, KC_RALT),
+  COMBO(combo_rctl, KC_RCTL),
+  COMBO(combo_rgui, KC_RGUI),
 };
 
 #endif
