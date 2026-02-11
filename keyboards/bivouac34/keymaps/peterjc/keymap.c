@@ -34,9 +34,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #ifdef COMBO_ENABLE
 combo_t key_combos[] = {
   // The core letters:
-  [COMBO_Q] = COMBO({KC_G,KC_M},KC_Q),
-  [COMBO_V] = COMBO({KC_P,KC_G},KC_V),
-  [COMBO_X] = COMBO({KC_F,KC_D},KC_X),
-  [COMBO_Z] = COMBO({KC_QUOT,KC_MINS},KC_Z),
+  [COMBO_Q] = COMBO({KC_G,KC_M,COMBO_END},KC_Q),
+  [COMBO_V] = COMBO({KC_P,KC_G,COMBO_END},KC_V),
+  [COMBO_X] = COMBO({KC_F,KC_D,COMBO_END},KC_X),
+  [COMBO_Z] = COMBO({KC_QUOT,KC_MINS,COMBO_END},KC_Z),
 };
 #endif
