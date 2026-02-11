@@ -1,11 +1,11 @@
 # Bivouac34 keyboard firmware
 
-You can [download pre-compiled TC36K firmware](https://github.com/peterjc/qmk_userspace/releases),
+You can [download pre-compiled Bivouac34 firmware](https://github.com/peterjc/qmk_userspace/releases),
 `bivouac34_vial.uf2` with Vial support is recommended as you can the use
 the [Vial GUI tool](https://get.vial.today/) to configure your layout by point-and-click.
 This is the default keymap:
 
-![Default keymap for the Slump52 keyboard QMK firmware](../../keymap-drawer/bivouac34.svg)
+![Default keymap for the Bivouac34 keyboard QMK firmware](../../keymap-drawer/bivouac34.svg)
 
 This is firmware for a Raspberry Pi PR2040-Zero controller monoblock 34 key design
 (split 33332_3, four columns of three, inner column of two, and three thumb keys,
@@ -56,7 +56,7 @@ Also, the Raspberry Pi Pico controller's user LED on GPIO pin 25 is set to show 
 * Hardware Availability: https://codeberg.org/peterjc/pico-keyboards/src/branch/main/bivouac34
 * Download Firmware pre-compiled with Vial support: [bivouac34_vial.uf2](https://github.com/peterjc/qmk_userspace/releases/download/latest/bivouac34_vial.uf2)
 
-See also the [TC36K ZMK firmware](https://github.com/peterjc/zmk-keyboard-graph-theory/tree/main/boards/shields/bivouac34).
+See also the [Bivouac34 ZMK firmware](https://github.com/peterjc/zmk-keyboard-graph-theory/tree/main/boards/shields/bivouac34).
 
 ## Compiling
 
