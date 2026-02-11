@@ -3,6 +3,7 @@
     "build_targets": [
         ["tutte_coxeter_36k", "default"],
         ["bivvy16d", "default"],
+        ["bivouac34", "default"],
         ["slump52", "default"]
     ]
 }
