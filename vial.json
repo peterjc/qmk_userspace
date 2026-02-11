@@ -4,6 +4,7 @@
         ["tutte_coxeter_36k", "vial"],
         ["bivvy16d", "vial"],
         ["bivouac34", "vial"],
+        ["bivouac34", "peterjc"],
         ["slump52", "vial"]
     ]
 }
