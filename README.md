@@ -20,6 +20,10 @@ keyboard PCB designs:
 * [Bivvy16D](keyboards/bivvy16d/readme.md), a Graph Theory based diode-free *wired* split
   keyboard using 17 GPIOs for 16 keys and a 5-way directional button on each half.
 
+* [Bivouac34](keyboards/bivouac34/readme.md), a Graph Theory based diode-free tented
+  keyboard using 20 GPIOs for 34 keys in a sparse 10x10 scanning matrix with only 4-key
+  roll-over.
+
 You can [download pre-compiled firmware](https://github.com/peterjc/qmk_userspace/releases).
 An 'offical' release is recommended, the 'latest' binaries may contain experimental changes.
 The versions with Vial support are strongly recommended as you can the use the
