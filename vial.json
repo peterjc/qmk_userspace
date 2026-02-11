@@ -3,6 +3,7 @@
     "build_targets": [
         ["tutte_coxeter_36k", "vial"],
         ["bivvy16d", "vial"],
+        ["bivouac34", "vial"],
         ["slump52", "vial"]
     ]
 }
