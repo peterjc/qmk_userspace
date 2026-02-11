@@ -8,11 +8,11 @@ point-and-click. This is the default keymap:
 ![Default keymap for the Bivvy16D keyboard QMK firmware](../../keymap-drawer/bivvy16d.svg)
 
 This is firmware for a Waveshare Raspberry Pi PR2040-Zero controller *wired split*
-32 key design with a 5-way directional button on each half,
+32 key design with a 5-way directional button on each half, my
+[Bivvy16D](https://codeberg.org/peterjc/pico-keyboards/src/branch/main/bivvy16d).
 
 This is firmware for a split 30, 31, or 32 key design (Visorbearer like layout),
-with a 5-way directional button on each half,
-my [Bivvy16D keyboard](https://codeberg.org/peterjc/pico-keyboards/src/branch/main/bivvy16d).
+with a 5-way directional button on each half, my [Bivvy16D keyboard](https://codeberg.org/peterjc/pico-keyboards/src/branch/main/bivvy16d).
 This is a *diode-free* design with a sparse 9 by 8 scanning matrix designed using
 Graph Theory to avoid ghosting. See this
 [blog post](https://astrobeano.blogspot.com/2025/05/topology-meets-custom-keyboard-circuit.html)
@@ -78,5 +78,5 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 Enter the bootloader in 3 ways:
 
 * **Bootmagic reset**: Hold down the key at (0,0) in the matrix (top left key, Qwerty `Q`) and plug in the keyboard
-* **Physical reset button**: Briefly press the button on the front of the controller (if physically accessible)
+* **Physical reset button**: Briefly press the button on the front of each controller (if physically accessible)
 * **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
