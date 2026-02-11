@@ -48,7 +48,13 @@ const uint16_t PROGMEM combo_lgui[] = {KC_T,KC_H,COMBO_END};
 const uint16_t PROGMEM combo_ralt[] = {KC_C,KC_I,COMBO_END};
 const uint16_t PROGMEM combo_rctl[] = {KC_I,KC_E,COMBO_END};
 const uint16_t PROGMEM combo_rgui[] = {KC_E,KC_A,COMBO_END};
-// 2-key vertical symbols
+// 2-key vertical symbols, left
+const uint16_t PROGMEM combo_btick[] = {KC_S,KC_ESC,COMBO_END};
+const uint16_t PROGMEM combo_at[] = {KC_N,KC_P,COMBO_END};
+const uint16_t PROGMEM combo_pound[] = {KC_T,KC_G,COMBO_END};
+const uint16_t PROGMEM combo_dollar[] = {KC_H,KC_M,COMBO_END};
+const uint16_t PROGMEM combo_bslash[] = {KC_K,KC_J,COMBO_END};
+// 2-key vertical symbols, right
 const uint16_t PROGMEM combo_slash[] = {KC_COMM,KC_DOT,COMBO_END};
 const uint16_t PROGMEM combo_amp[] = {KC_A,KC_BSPC,COMBO_END};
 const uint16_t PROGMEM combo_hash[] = {KC_E,KC_QUOT,COMBO_END};
@@ -70,7 +76,13 @@ combo_t key_combos[] = {
   COMBO(combo_ralt, KC_RALT),
   COMBO(combo_rctl, KC_RCTL),
   COMBO(combo_rgui, KC_RGUI),
-  // 2-key vertical symbols
+  // 2-key vertical symbols, left
+  COMBO(combo_btick, KC_GRV),
+  COMBO(combo_at, S(KC_QUOT)),
+  COMBO(combo_pound, S(KC_3)),
+  COMBO(combo_dollar, S(KC_4)),
+  COMBO(combo_bslash, KC_NUBS),
+  // 2-key vertical symbols, right
   COMBO(combo_slash, KC_SLSH),
   COMBO(combo_amp, S(KC_7)),
   COMBO(combo_hash, KC_NUHS),
