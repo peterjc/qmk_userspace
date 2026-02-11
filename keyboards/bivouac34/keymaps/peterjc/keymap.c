@@ -48,6 +48,12 @@ const uint16_t PROGMEM combo_lgui[] = {KC_T,KC_H,COMBO_END};
 const uint16_t PROGMEM combo_ralt[] = {KC_C,KC_I,COMBO_END};
 const uint16_t PROGMEM combo_rctl[] = {KC_I,KC_E,COMBO_END};
 const uint16_t PROGMEM combo_rgui[] = {KC_E,KC_A,COMBO_END};
+// 2-key vertical symbols
+const uint16_t PROGMEM combo_slash[] = {KC_COMM,KC_DOT,COMBO_END};
+const uint16_t PROGMEM combo_amp[] = {KC_A,KC_BSPC,COMBO_END};
+const uint16_t PROGMEM combo_hash[] = {KC_E,KC_QUOT,COMBO_END};
+const uint16_t PROGMEM combo_excl[] = {KC_I,KC_MINS,COMBO_END};
+const uint16_t PROGMEM combo_tilde[] = {KC_C,KC_EQL,COMBO_END};
 
 combo_t key_combos[] = {
   COMBO(combo_Q, KC_Q),
@@ -64,6 +70,12 @@ combo_t key_combos[] = {
   COMBO(combo_ralt, KC_RALT),
   COMBO(combo_rctl, KC_RCTL),
   COMBO(combo_rgui, KC_RGUI),
-};
+  // 2-key vertical symbols
+  COMBO(combo_slash, KC_SLSH),
+  COMBO(combo_amp, S(KC_7)),
+  COMBO(combo_hash, KC_NUHS),
+  COMBO(combo_excl, S(KC_1)),
+  COMBO(combo_tilde, S(KC_NUHS)), 
+ };
 
 #endif
