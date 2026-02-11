@@ -32,11 +32,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 #ifdef COMBO_ENABLE
+
+// The core letters:
+const uint16_t PROGMEM combo_Q = {KC_G,KC_M,COMBO_END};
+const uint16_t PROGMEM combo_V = {KC_P,KC_G,COMBO_END};
+const uint16_t PROGMEM combo_X = {KC_F,KC_D,COMBO_END};
+const uint16_t PROGMEM combo_Z = {KC_QUOT,KC_MINS,COMBO_END};
+
 combo_t key_combos[] = {
-  // The core letters:
-  COMBO({KC_G,KC_M,COMBO_END},KC_Q),
-  COMBO({KC_P,KC_G,COMBO_END},KC_V),
-  COMBO({KC_F,KC_D,COMBO_END},KC_X),
-  COMBO({KC_QUOT,KC_MINS,COMBO_END},KC_Z),
+  COMBO(combo_Q, KC_Q),
+  COMBO(combo_V, KC_V),
+  COMBO(combo_X, KC_X),
+  COMBO(combo_Z, KC_Z),
 };
+
 #endif
