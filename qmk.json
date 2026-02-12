@@ -4,6 +4,7 @@
         ["tutte_coxeter_36k", "default"],
         ["bivvy16d", "default"],
         ["bivouac34", "default"],
+        ["bivouac34", "peterjc"],
         ["slump52", "default"]
     ]
 }
