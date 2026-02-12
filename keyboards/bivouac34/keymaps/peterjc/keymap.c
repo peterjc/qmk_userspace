@@ -120,7 +120,6 @@ const key_override_t colon_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, S(KC
 // Have to suppress shift to get plain semi-colon (all layers)
 const key_override_t semi_colon_override = {.trigger_mods      = MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT),
                                             .suppressed_mods   = MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT),
-                                            .layers            = 255,
                                             .negative_mod_mask = 0,
                                             .custom_action     = NULL,
                                             .context           = NULL,
