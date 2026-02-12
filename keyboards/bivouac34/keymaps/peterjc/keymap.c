@@ -60,6 +60,16 @@ const uint16_t PROGMEM combo_amp[] = {KC_A,KC_BSPC,COMBO_END};
 const uint16_t PROGMEM combo_hash[] = {KC_E,KC_QUOT,COMBO_END};
 const uint16_t PROGMEM combo_excl[] = {KC_I,KC_MINS,COMBO_END};
 const uint16_t PROGMEM combo_tilde[] = {KC_C,KC_EQL,COMBO_END};
+// 2-key brackets etc on inner column, left:
+const uint16_t PROGMEM combo_percent[] = {KC_M,KC_K,COMBO_END};
+const uint16_t PROGMEM combo_open_curly[] = {KC_H,KC_K,COMBO_END};
+const uint16_t PROGMEM combo_open_bracket[] = {KC_H,KC_J,COMBO_END};
+const uint16_t PROGMEM combo_open_square[] = {KC_L,KC_J,COMBO_END};
+// 2-key brackets etc on inner column, right:
+const uint16_t PROGMEM combo_caret[] = {KC_DOT,KC_BSPC,COMBO_END};
+const uint16_t PROGMEM combo_close_curly[] = {KC_DOT,KC_A,COMBO_END};
+const uint16_t PROGMEM combo_close_bracket[] = {KC_COMM,KC_A,COMBO_END};
+const uint16_t PROGMEM combo_close_square[] = {KC_COMM,KC_U,COMBO_END};
 
 combo_t key_combos[] = {
   COMBO(combo_Q, KC_Q),
@@ -87,7 +97,17 @@ combo_t key_combos[] = {
   COMBO(combo_amp, S(KC_7)),
   COMBO(combo_hash, KC_NUHS),
   COMBO(combo_excl, S(KC_1)),
-  COMBO(combo_tilde, S(KC_NUHS)), 
+  COMBO(combo_tilde, S(KC_NUHS)),
+  // 2-key brackets etc on inner column, left
+  COMBO(combo_percent, S(KC_5)),
+  COMBO(combo_open_curly, S(KC_LBRC)),
+  COMBO(combo_open_bracket, S(KC_9)),
+  COMBO(combo_open_square, KC_LBRC),
+  // 2-key brackets etc on inner column, right
+  COMBO(combo_caret, S(KC_6)),
+  COMBO(combo_close_curly, S(KC_RBRC)),
+  COMBO(combo_close_bracket, S(KC_0)),
+  COMBO(combo_close_square, KC_RBRC),
  };
 
 #endif
