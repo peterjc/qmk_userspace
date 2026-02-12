@@ -111,3 +111,18 @@ combo_t key_combos[] = {
  };
 
 #endif
+
+#ifdef KEY_OVERRIDE_ENABLE
+
+const key_override_t double_quote_override = ko_make_basic(MOD_MASK_SHIFT, KC_QUOT, S(KC_2));
+const key_override_t colon_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, S(KC_SCLN));
+const key_override_t semi_colon_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_SCLN);
+
+// This globally defines all key overrides to be used
+const key_override_t *key_overrides[] = {
+  &double_quote_override,
+  &colon_override,
+  &semi_colon_override,
+};
+
+#endif
