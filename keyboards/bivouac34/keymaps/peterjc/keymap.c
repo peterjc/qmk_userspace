@@ -128,29 +128,16 @@ const key_override_t semi_colon_override = {.trigger_mods      = MOD_BIT(KC_LSFT
                                             .enabled           = NULL};
 
 // If shift is used with the combos for S(KC_9) and S(KC_0), want S(KC_COMM) and S(KC_DOT) for < and > instead:
-const key_override_t bracket_lt_override = {.trigger_mods      = MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT),
-                                            .negative_mod_mask = 0,
-                                            .custom_action     = NULL,
-                                            .context           = NULL,
-                                            .trigger           = S(KC_9),
-                                            .replacement       = KC_COMM,
-                                            .enabled           = NULL};
-const key_override_t bracket_gt_override = {.trigger_mods      = MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT),
-                                            .negative_mod_mask = 0,
-                                            .custom_action     = NULL,
-                                            .context           = NULL,
-                                            .trigger           = S(KC_0),
-                                            .replacement       = KC_DOT,
-                                            .enabled           = NULL};
-
+const key_override_t bracket_lt_override = ko_make_basic(MOD_MASK_SHIFT, S(KC_9), S(KC_COMM));
+const key_override_t bracket_gt_override = ko_make_basic(MOD_MASK_SHIFT, S(KC_0), S(KC_DOT));
 
 // This globally defines all key overrides to be used
 const key_override_t *key_overrides[] = {
   &double_quote_override,
   &colon_override,
   &semi_colon_override,
-  &bracket_gt_override,
   &bracket_lt_override,
+  &bracket_gt_override,
 };
 
 #endif
