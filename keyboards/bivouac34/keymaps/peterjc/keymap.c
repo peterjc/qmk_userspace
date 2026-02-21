@@ -116,16 +116,8 @@ combo_t key_combos[] = {
 
 const key_override_t double_quote_override = ko_make_basic(MOD_MASK_SHIFT, KC_QUOT, S(KC_2));
 const key_override_t colon_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, S(KC_SCLN));
-
-// Have to suppress shift to get plain semi-colon (all layers)
-const key_override_t semi_colon_override = {.trigger_mods      = MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT),
-                                            .suppressed_mods   = MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT),
-                                            .negative_mod_mask = 0,
-                                            .custom_action     = NULL,
-                                            .context           = NULL,
-                                            .trigger           = KC_COMM,
-                                            .replacement       = KC_SCLN,
-                                            .enabled           = NULL};
+// Have to suppress shift to get plain semi-colon (using negative_mod_mask):
+const key_override_t semi_colon_override = ko_make_basic(MOD_MASK_SHIFT, KC_COLN, KC_SCLN);
 
 // If shift is used with the combos for S(KC_9) and S(KC_0), want S(KC_COMM) and S(KC_DOT) for < and > instead:
 const key_override_t bracket_lt_override = ko_make_basic(MOD_MASK_SHIFT, S(KC_9), S(KC_COMM));
