@@ -114,10 +114,12 @@ combo_t key_combos[] = {
 
 #ifdef KEY_OVERRIDE_ENABLE
 
-const key_override_t double_quote_override = ko_make_basic(MOD_MASK_SHIFT, KC_QUOT, S(KC_2));
+// single quote + shift --> double quote (as shift+2 assuming UK layout):
+const key_override_t double_quote_override = ko_make_basic(MOD_MASK_SHIFT, KC_QUOT, S(KC_2));i
+// dot + shift --> colon:
 const key_override_t colon_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, S(KC_SCLN));
-// Have to suppress shift to get plain semi-colon (using negative_mod_mask):
-const key_override_t semi_colon_override = ko_make_basic(MOD_MASK_SHIFT, KC_COLN, KC_SCLN);
+// comma + shift --> semicolon (has to suppress shift to get plain semi-colon):
+const key_override_t semi_colon_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_SCLN);
 
 // If shift is used with the combos for S(KC_9) and S(KC_0), want S(KC_COMM) and S(KC_DOT) for < and > instead:
 const key_override_t bracket_lt_override = ko_make_basic(MOD_MASK_SHIFT, S(KC_9), S(KC_COMM));
