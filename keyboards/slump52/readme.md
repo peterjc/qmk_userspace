@@ -61,7 +61,7 @@ Or, you might want to move all the pinky column keys down a step for more stagge
 Most of the symbols can be used with shift and the numpad, but this and the
 remaining punctuation (semicolon, brackets, backslash, pipe, hash, tilde, etc) can
 be placed on layers or combos when personalising the layout (eg when hold space).
- 
+
 The Raspberry Pi Pico controller's user LED on GPIO pin 25 is set to show the Caps Lock state.
 
 * Keyboard Maintainer: [Peter J. A. Cock](https://github.com/peterjc)
