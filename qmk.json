@@ -5,6 +5,7 @@
         ["bivvy16d", "default"],
         ["bivouac34", "default"],
         ["bivouac34", "peterjc"],
+        ["goldilocks32", "default"],
         ["slump52", "default"]
     ]
 }
