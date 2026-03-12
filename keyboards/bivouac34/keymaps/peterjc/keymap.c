@@ -3,6 +3,20 @@
 
 #include QMK_KEYBOARD_H
 
+bool led_update_kb(led_t led_state) {
+    bool res = led_update_user(led_state);
+    if(res) {
+        // We have only one smart RGB LED
+        rgb_matrix_set_color(
+            0,
+            led_state.num_lock ? 255 : 0,
+            led_state.scroll_lock ? 255 : 0,
+            led_state.caps_lock ? 255 : 0
+        );
+    }
+    return res;
+}
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      /*
       * ┌───┬───┬───┬───┐                 ┌───┬───┬───┬───┐
