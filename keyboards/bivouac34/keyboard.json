@@ -14,9 +14,6 @@
         "cols": ["GP2", "GP9", "GP13", "GP26", "GP28", "GP29", "GP27", "GP12", "GP8", "GP1"],
         "rows": ["GP10", "GP14", "GP0", "GP4", "GP11", "GP15", "GP5", "GP3", "GP7", "GP6"]
     },
-    "indicators": {
-        "caps_lock": "GP16"
-    },
     "processor": "RP2040",
     "url": "",
     "usb": {
