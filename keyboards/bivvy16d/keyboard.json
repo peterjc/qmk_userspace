@@ -21,6 +21,10 @@
         "pid": "0x0000",
         "vid": "0xFEED"
     },
+    "ws2812": {
+        "driver": "vendor",
+        "pin": "GP16"
+    },
     "split": {
         "bootmagic": {
             "matrix": [0, 0]
