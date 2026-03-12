@@ -9,6 +9,7 @@
         "extrakey": true,
         "mousekey": true,
         "rgb_matrix": true,
+        "rgblight": true,
         "nkro": false
     },
     "matrix_pins": {
@@ -21,6 +22,19 @@
         "device_version": "1.0.0",
         "pid": "0x0000",
         "vid": "0xFEED"
+    },
+    "rgblight": {
+        "animations": {
+            "breathing": true,
+            "rgb_test": true,
+            "twinkle": true
+        },
+        "default": {
+            "val": 0
+        },
+        "led_count": 1,
+        "max_brightness": 24,
+        "sleep": true
     },
     "ws2812": {
         "driver": "vendor",
