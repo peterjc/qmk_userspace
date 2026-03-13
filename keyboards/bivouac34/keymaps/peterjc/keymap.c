@@ -27,6 +27,29 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
 }
 
+bool process_detected_host_os_kb(os_variant_t detected_os) {
+    if (!process_detected_host_os_user(detected_os)) {
+        return false;
+    }
+    switch (detected_os) {
+        case OS_MACOS:
+        case OS_IOS:
+            rgblight_setrgb_at(RGB_WHITE, 0);
+            break;
+        case OS_WINDOWS:
+            rgblight_setrgb_at(RGB_BLUE, 0);
+            break;
+        case OS_LINUX:
+            rgblight_setrgb_at(RGB_ORANGE, 0);
+            break;
+        case OS_UNSURE:
+            rgblight_setrgb_at(RGB_RED, 0);
+            break;
+    }
+    
+    return true;
+}
+
 bool led_update_kb(led_t led_state) {
     bool res = led_update_user(led_state);
     if(res) {
