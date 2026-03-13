@@ -1,3 +1,5 @@
 #pragma once
 
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
+
+#define OS_DETECTION_DEBUG_ENABLE

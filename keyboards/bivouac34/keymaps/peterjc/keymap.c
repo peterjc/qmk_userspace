@@ -3,6 +3,28 @@
 
 #include QMK_KEYBOARD_H
 
+#include "os_detection.h"
+
+enum custom_keycodes {
+    STORE_SETUPS = SAFE_RANGE,
+    PRINT_SETUPS,
+};
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case STORE_SETUPS:
+            if (record->event.pressed) {
+                store_setups_in_eeprom();
+            }
+            return false;
+        case PRINT_SETUPS:
+            if (record->event.pressed) {
+                print_stored_setups();
+            }
+            return false;
+    }
+}
+
 bool led_update_kb(led_t led_state) {
     bool res = led_update_user(led_state);
     if(res) {
@@ -38,10 +60,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                    KC_R,    KC_BSPC,     OSM(MOD_LSFT), LT(1, KC_SPC)
     ),
     [1] = LAYOUT_split_3x5_2(
-        KC_PSLS, KC_1,    KC_2,    KC_3,    KC_PPLS,     KC_PGUP, KC_HOME, KC_UP,   KC_END,  KC_MPLY,
-        KC_PAST, KC_4,    KC_5,    KC_6,    KC_PMNS,     KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_VOLU,
-        KC_PDOT, KC_7,    KC_8,    KC_9,    KC_TRNS,     KC_TRNS, A(KC_LEFT), KC_ENT, A(KC_RGHT), KC_VOLD,
-                      MT(MOD_LSFT,KC_0),    KC_TRNS,     KC_TRNS, KC_TRNS
+        KC_PSLS, KC_1,    KC_2,    KC_3,    KC_PPLS,      KC_PGUP,      KC_HOME, KC_UP,   KC_END,  KC_MPLY,
+        KC_PAST, KC_4,    KC_5,    KC_6,    KC_PMNS,      KC_PGDN,      KC_LEFT, KC_DOWN, KC_RGHT, KC_VOLU,
+        KC_PDOT, KC_7,    KC_8,    KC_9,    STORE_SETUPS, PRINT_SETUPS, A(KC_LEFT), KC_ENT, A(KC_RGHT), KC_VOLD,
+                      MT(MOD_LSFT,KC_0),    KC_TRNS,      KC_TRNS,      KC_TRNS
     )
 };
 
