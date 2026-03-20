@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,  KC_P,    KC_G,    KC_M,    KC_K,        KC_DOT,  KC_BSPC, KC_QUOT, KC_MINS, KC_EQL,
         KC_S,    KC_N,    KC_T,    KC_H,    KC_J,        KC_COMM, KC_A,    KC_E,    KC_I,    KC_C,
         KC_B,    KC_F,    KC_D,    KC_L,    KC_LEFT,     KC_RGHT, KC_U,    KC_O,    KC_Y,    KC_W,
-                                   KC_R,    KC_BSPC,     OSM(MOD_LSFT), LT(1, KC_SPC)
+                                   KC_R,    KC_BSPC,     KC_LSFT, LT(1, KC_SPC)
     ),
     [1] = LAYOUT_split_3x5_2(
         KC_PSLS, KC_1,    KC_2,    KC_3,    KC_PPLS,     KC_PGUP, KC_HOME, KC_UP,   KC_END,  KC_MPLY,
