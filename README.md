@@ -5,24 +5,23 @@
 
 This is my fork of the [QMK Userspace repository](https://github.com/qmk/qmk_userspace),
 so that I can experiment with keyboards and layouts without the overhead of the full
-[QMK firmware repository](https://github.com/qmk/qmk_firmware/). My QMK compatible
-keyboard PCB designs:
+[QMK firmware repository](https://github.com/qmk/qmk_firmware/). These use Graph Theory
+based sparse scanning matrices to avoid ghosting, rather than diodes. 
+My QMK compatible keyboard PCB designs:
 
-* [Gamma Omega TC36K](keyboards/tutte_coxeter_36k/readme.md) - a no-diode single
-  PCB design for a monoblock split 3x5_3 design using Graph Theory (topology) to
-  avoid ghosting. This has a sparse 13x13 scanning matrix (using 26 GPIO pins)
-  for 36 keys with 6-key rollover.
-
-* [Slump52](keyboards/slump52/readme.md), a Graph Theory based diode-free keyboard with
-  26 GPIO pins for 52 keys in a sparse 13x13 scanning matrix with only 4-key roll-over
-  using the Incidence Graph of the Projective Plane of order 3, PG(2,3).
-
-* [Bivvy16D](keyboards/bivvy16d/readme.md), a Graph Theory based diode-free *wired* split
-  keyboard using 17 GPIOs for 16 keys and a 5-way directional button on each half.
-
-* [Bivouac34](keyboards/bivouac34/readme.md), a Graph Theory based diode-free tented
-  keyboard using 20 GPIOs for 34 keys in a sparse 10x10 scanning matrix with only 4-key
-  roll-over.
+* [Gamma Omega TC36K](keyboards/tutte_coxeter_36k), using a Raspberry Pi Pico controller with
+  26 GPIO pins for 36 keys and 6-key roll-over using a partial Tutte-Coxeter Graph.
+* [Slump52](keyboards/slump52), using a Raspberry Pi Pico controller with
+  26 GPIO pins for 52 keys and 4-key roll-over using the Incidence Graph of the
+  Projective Plane of order 3 PG(2,3).
+* [Bivvy16D](keyboards/bivvy16d), a Bluetooth *or wired* split keyboard using
+  17 GPIO pins for 16 (or 15) keys and a 5-way directional button on each half,
+  with 4-key roll-over per half (14KRO without the navigation button).
+* [Bivouac34](keyboards/bivouac34), using a Wareshare RP2040-Zero controller with
+  20 GPIO pins for 34 keys and 4-key roll-over using the unique but unnamed graph of this size.
+* [Goldilocks32](keyboards/goldilocks32), using an PR2040 'Pro Micro' controller with
+  25 GPIO pins for 32 (or 30) keys and a 5-way directional button (6KRO without the
+  navigation button).
 
 You can [download pre-compiled firmware](https://github.com/peterjc/qmk_userspace/releases).
 An 'offical' release is recommended, the 'latest' binaries may contain experimental changes.
