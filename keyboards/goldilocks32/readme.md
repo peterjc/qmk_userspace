@@ -1,7 +1,7 @@
 # Goldilocks32 keyboard firmware
 
 You can [download pre-compiled Goldilocks32 firmware](https://github.com/peterjc/qmk_userspace/releases),
-`goldilocks32_vial.uf2` with Vial support is recommended as you can the use
+`goldilocks32_vial.uf2` with Vial support, which is recommended as you can the use
 the [Vial GUI tool](https://get.vial.today/) to configure your layout by point-and-click.
 This is the default keymap:
 
