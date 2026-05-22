@@ -22,9 +22,11 @@ My QMK compatible keyboard PCB designs:
 * [Goldilocks32](keyboards/goldilocks32), using an PR2040 'Pro Micro' controller with
   25 GPIO pins for 32 (or 30) keys and a 5-way directional button (6KRO without the
   navigation button).
+* [Rugby Union](keyboards/rugby_union), using an PR2040 'Pro Micro' controller with
+  25 GPIO pins for 30 keys and 8KRO.
 
 You can [download pre-compiled firmware](https://github.com/peterjc/qmk_userspace/releases).
-An 'offical' release is recommended, the 'latest' binaries may contain experimental changes.
+An 'official' release is recommended, the 'latest' binaries may contain experimental changes.
 The versions with Vial support are strongly recommended as you can the use the
 [Vial GUI tool](https://get.vial.today/) to configure your layout by point-and-click
 (the default layout is deliberately very minimal).
