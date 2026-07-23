@@ -56,7 +56,8 @@ This minimal default layout is rendered as an image above.
 * Hardware Availability: https://codeberg.org/peterjc/pico-keyboards/src/branch/main/rugby_union
 * Download Firmware pre-compiled with Vial support: [rugby_union_vial.uf2](https://github.com/peterjc/qmk_userspace/releases/download/latest/rugby_union_vial.uf2)
 
-See also the [Rugby Union ZMK firmware](https://github.com/peterjc/zmk-keyboard-graph-theory/tree/main/boards/shields/rugby_union).
+See also the [Rugby Union ZMK firmware](https://github.com/peterjc/zmk-keyboard-graph-theory/tree/main/boards/shields/rugby_union)
+and [Rugby Union RMK firmware](https://github.com/peterjc/rmk-pico-keyboards/tree/main/Rugby_Union_RP2040).
 
 ## Compiling
 
