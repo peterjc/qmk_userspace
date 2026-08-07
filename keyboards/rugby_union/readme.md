@@ -12,7 +12,7 @@ tented monoblock 30 key design with only one key per thumb, my
 [Rugby Union keyboard](https://codeberg.org/peterjc/pico-keyboards/src/branch/main/rugby_union).
 
 This is a *diode-free* design with a sparse 10 by 15 scanning matrix designed using this
-[25 vertex girth 10 graph with 30 edges](https://houseofgraphs.org/graphs/45469).
+[25 vertex girth 10 graph with 30 edges](https://houseofgraphs.org/graphs/54569).
 Using 25 vertices or GPIO pins, with 30 edges or keys, we get 8KRO. See this
 [blog post](https://astrobeano.blogspot.com/2025/05/topology-meets-custom-keyboard-circuit.html)
 for background.
