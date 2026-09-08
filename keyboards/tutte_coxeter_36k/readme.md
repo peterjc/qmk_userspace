@@ -19,7 +19,7 @@ for background, although the final pin selection and trace routing changed).
 ![Partial Tutte-Coxeter Graph (26/30 vertices, 36/45 edges)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvS5QfAl7YotptMtpu0nG8XOHOsqG2vocUFF2sRgrn_QwAcUQNhDkctHt_42rQor3Bb5tbAW6FiOsYqv2craP086HMTuAqWk9U0A4yOeEsQkhyphenhyphenUxoayJWf5e-N3_Jg1TC1p9YAiVPTK02pEVCUu3hl72REIk5BAjXgZGoF7T-NWQ28iRirwFs6yzFzAe0/w200-h194/Screenshot%202025-05-28%20at%2014.59.35.png)
 
 This matrix shows the 13×13 partial Tutte-Coxeter bipartite scanning matrix
-in the physical column order (QAZ colunm first) with rows sorted to ensure Q
+in the physical column order (QAZ column first) with rows sorted to ensure Q
 is top left as the first matrix entry. If using the full matrix this would
 be 15x15 using 30 GPIOs and have another 9 keys making 45 in all.
 The allocation of keys to matrix elements and scanning matrix rows and columns
